@@ -10,9 +10,70 @@
 
   gtag('config', 'G-41JZ6X4N12');
 </script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" }},
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { matchFontHeight: false },
+    displayAlign: "left",
+    displayIndent: "2em"
+  });
+</script>
 <title>Tatsuya Terao</title>
 <link href="css/style.css" rel="stylesheet" media="all">
 </head>
+
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script>
+$(function() {
+    $(".button").click(function() {
+        $(".hide").slideToggle("");
+    });
+});
+</script>
+<style>
+.button{
+    display: inline-block;
+    background: #ffe4b5;
+    border-radius: 7px 7px 7px 7px;
+    padding: 2px 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.hide{
+    display:none;
+    font-size: 14px;
+}
+
+.openbox input {
+    display: none; 
+}
+.openbox .boxshow {
+    height: 0;
+    opacity: 0; 
+    display: none;
+}
+.inputcss:checked + .boxshow {
+    height: auto;
+    opacity: 1; 
+    display: block;
+    font-size: 14px;
+}
+.openbox label {
+    display: inline-block;
+    background: #ffe4b5;
+    border-radius: 7px 7px 7px 7px;
+    padding: 2px 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+</style>
 
 
 <body bgcolor="#FFFFFF">
@@ -49,28 +110,73 @@ I have a interest in the design and analysis of algorithms in theoretical comput
 
 <p>See <a href="https://dblp.org/pid/335/5620.html">DBLP</a> for a more up-to-date list.</p>
 
-<p>Unless marked with&dagger;, authors are listed alphabetically.</p>
+<p>As is the convention in theoretical computer science, authors are listed alphabetically. Exceptions are marked with&dagger;</p>
 
 <ol>
     <li>
-        <strong>Parameterized Quantum Query Algorithms for Graph Problems</strong>&dagger; <br />
-        Tatsuya Terao, Ryuhei Mori <br />
-        Proceedings of the 32nd Annual European Symposium on Algorithms (<strong>ESA 2024</strong>)
+        <strong>Parameterized Quantum Query Algorithms for Graph Problems</strong>&dagger; [arXiv(coming soon)] <br />
+        Tatsuya Terao, <a href="https://q.c.titech.ac.jp/mori/">Ryuhei Mori</a> <br />
+        Proceedings of the 32nd Annual European Symposium on Algorithms (<strong>ESA 2024</strong>) <br />
+        <div class="openbox">
+        <label for="esa2024">Abstract</label>
+        <input id="esa2024" class="inputcss" type="checkbox" />
+        <span class="boxshow">
+        Coming Soon.
+        </span>
+        </div>
     </li>
+
     <li>
         <strong>Subquadratic Submodular Maximization with a General Matroid Constraint</strong> [<a href="https://arxiv.org/abs/2405.00359">arXiv</a>, <a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol297-icalp2024/LIPIcs.ICALP.2024.100/LIPIcs.ICALP.2024.100.pdf">proceeding</a>, <a href="eslide/2024.07.09.ICALP.pdf">slide@ICALP</a>]<br />
-        Yusuke Kobayashi, Tatsuya Terao <br />
-        Proceedings of the 51st EATCS International Colloquium on Automata, Languages and Programming (<strong>ICALP 2024</strong>)
+        <a href="https://www.kurims.kyoto-u.ac.jp/~yusuke/eindex.html">Yusuke Kobayashi</a>, Tatsuya Terao <br />
+        Proceedings of the 51st EATCS International Colloquium on Automata, Languages and Programming (<strong>ICALP 2024</strong>) <br />
+        <div class="openbox">
+        <label for="icalp2024">Abstract</label>
+        <input id="icalp2024" class="inputcss" type="checkbox" />
+        <span class="boxshow">
+        We consider fast algorithms for monotone submodular maximization with a general matroid constraint. We present a randomized $(1 - 1/e - \varepsilon)$-approximation algorithm that requires $\tilde{O}_{\varepsilon}(\sqrt{r} n)$ independence oracle and value oracle queries, where $n$ is the number of elements in the matroid and $r \leq n$ is the rank of the matroid. This improves upon the previously best algorithm by Buchbinder-Feldman-Schwartz [Mathematics of Operations Research 2017] that requires $\tilde{O}_{\varepsilon}(r^2 + \sqrt{r}n)$ queries.  <br />
+
+        Our algorithm is based on continuous relaxation, as with other submodular maximization algorithms in the literature. To achieve subquadratic query complexity, we develop a new rounding algorithm, which is our main technical contribution. The rounding algorithm takes as input a point represented as a convex combination of $t$ bases of a matroid and rounds it to an integral solution. Our rounding algorithm requires $\tilde{O}(r^{3/2} t)$ independence oracle queries, while the previously best rounding algorithm by Chekuri-Vondr&aacute;k-Zenklusen [FOCS 2010] requires $O(r^2 t)$ independence oracle queries. A key idea in our rounding algorithm is to use a directed cycle of arbitrary length in an auxiliary graph, while the algorithm of Chekuri-Vondr\'{a}k-Zenklusen focused on directed cycles of length two. </div>
+        </span>
+        </div>
     </li>
+
     <li>
         <strong>Faster Matroid Partition Algorithms</strong> [<a href="https://arxiv.org/abs/2303.05920">arXiv</a>, <a href="https://drops.dagstuhl.de/opus/volltexte/2023/18156/pdf/LIPIcs-ICALP-2023-104.pdf">proceeding</a>, <a href="eslide/2023.07.14.ICALP.pdf">slide@ICALP</a>]<br />
         Tatsuya Terao <br />
-        Proceedings of the 50th EATCS International Colloquium on Automata, Languages and Programming (<strong>ICALP 2023</strong>)
+        Proceedings of the 50th EATCS International Colloquium on Automata, Languages and Programming (<strong>ICALP 2023</strong>) <br />
+        <div class="openbox">
+        <label for="icalp2023">Abstract</label>
+        <input id="icalp2023" class="inputcss" type="checkbox" />
+        <span class="boxshow">
+        In the matroid partitioning problem, we are given $k$ matroids $\mathcal{M}_1 = (V, \mathcal{I}_1), \dots , \mathcal{M}_k = (V, \mathcal{I}_k)$ defined over a common ground set $V$ of $n$ elements, and we need to find a partitionable set $S \subseteq V$ of largest possible cardinality, denoted by $p$. Here, a set $S \subseteq V$ is called partitionable  if there exists a partition $(S_1, \dots , S_k)$ of $S$ with $S_i \in \mathcal{I}_i$ for $i = 1, \ldots, k$. In 1986, Cunningham [SICOMP 1986] presented a matroid partition algorithm that uses $O(n p^{3/2} + k n)$ independence oracle queries, which was the previously known best algorithm. This query complexity is $O(n^{5/2})$ when $k \leq n$. <br />
+
+        Our main result is to present a matroid partition algorithm that uses $\tilde{O}(k^{1/3} n p + k n)$ independence oracle queries, which is $\tilde{O}(n^{7/3})$ when $k \leq n$. This improves upon previous Cunningham's algorithm. To obtain this, we present a new approach \emph{edge recycling augmentation}, which can be attained through new ideas: an efficient utilization of the binary search technique by Nguy$\tilde{{\hat{\text{e}}}}$n [2019] and Chakrabarty-Lee-Sidford-Singla-Wong [FOCS 2019] and a careful analysis of the number of independence oracle queries. Our analysis differs significantly from the one for matroid intersection algorithms, because of the parameter $k$. We also present a matroid partition algorithm that uses $\tilde{O}((n + k) \sqrt{p})$ rank oracle queries.
+        </span>
+        </div>
     </li>
+
     <li>
         <strong>One-Face Shortest Disjoint Paths with a Deviation Terminal</strong> [<a href="https://drops.dagstuhl.de/opus/volltexte/2022/17332/pdf/LIPIcs-ISAAC-2022-47.pdf">proceeding</a>, <a href="eslide/2022.12.20.ISAAC.pdf">slide@ISAAC</a>]<br />
-        Yusuke Kobayashi, Tatsuya Terao <br />
-        Proceedings of the 33rd International Symposium on Algorithms and Computation (<strong>ISAAC 2022</strong>)
+        <a href="https://www.kurims.kyoto-u.ac.jp/~yusuke/eindex.html">Yusuke Kobayashi</a>, Tatsuya Terao <br />
+        Proceedings of the 33rd International Symposium on Algorithms and Computation (<strong>ISAAC 2022</strong>) <br />
+        <div class="openbox">
+            <label for="isaac2022">Abstract</label>
+            <input id="isaac2022" class="inputcss" type="checkbox" />
+            <span class="boxshow">
+                For an undirected graph $G$ and distinct vertices $s_1, t_1, \dots, s_k, t_k$ called terminals, 
+                the {\em shortest $k$-disjoint paths problem} asks for $k$ pairwise vertex-disjoint paths $P_1, \dots , P_k$ 
+                such that $P_i$ connects $s_i$ and $t_i$ for $i = 1, \dots , k$ and the sum of their lengths is minimized.
+                This problem is a natural optimization version of the well-known $k$-disjoint paths problem, 
+                and its polynomial solvability is widely open. 
+                One of the best results on the shortest $k$-disjoint paths problem is due to Datta et al. [FSTTCS 2018], 
+                who present a polynomial-time algorithm for the case when $G$ is planar and all the terminals are on one face. 
+                In this paper, we extend this result by giving a polynomial-time randomized algorithm for the case when 
+                all the terminals except one are on some face of $G$. 
+                In our algorithm, we combine the arguments of Datta et al.~with some results on the shortest disjoint $(A + B)$-paths problem shown by Hirai and Namba [Algorithmica 2018]. 
+                To this end, we present a non-trivial bijection between $k$ disjoint paths and disjoint $(A + B)$-paths, which is a key technical contribution of this paper.
+            </span>
+            </div>
     </li>
 </ol>
 
