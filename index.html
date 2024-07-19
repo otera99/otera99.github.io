@@ -117,7 +117,17 @@ I have a interest in the design and analysis of algorithms in theoretical comput
         <input id="esa2024" class="inputcss" type="checkbox" />
         <span class="boxshow">
             <div class="box6">
-            Coming Soon.
+                In this paper, we consider the parameterized quantum query complexity for graph problems. We design parameterized quantum query algorithms for $k$-vertex cover and $k$-matching problems, and present lower bounds on the parameterized quantum query complexity. Then, we show that our quantum query algorithms are optimal up to a constant factor when the parameters are small. Our main results are as follows. <br/>
+                
+                <b>Parameterized quantum query complexity of vertex cover.</b>
+                In the $k$-vertex cover problem, we are given an undirected graph $G$ with $n$ vertices and an integer $k$, and the objective is to determine whether $G$ has a vertex cover of size at most $k$. We show that the quantum query complexity of the $k$-vertex cover problem is $O(\sqrt{k}n + k^{3/2}\sqrt{n})$ in the adjacency matrix model. For the design of the quantum query algorithm, we use the method of kernelization, a well-known tool for the design of parameterized classical algorithms, combined with Grover's search. <br/>
+                
+                <b>Parameterized quantum query complexity of matching.</b>
+                In the $k$-matching problem, we are given an undirected graph $G$ with $n$ vertices and an integer $k$, and the objective is to determine whether $G$ has a matching of size at least $k$. We show that the quantum query complexity of the $k$-matching problem is $O(\sqrt{k}n + k^{2})$ in the adjacency matrix model. We obtain this upper bound by using Grover's search carefully and analyzing the number of Grover's searches by making use of potential functions. We also show that the quantum query complexity of the maximum matching problem is $O(\sqrt{p}n + p^{2})$ where $p$ is the size of the maximum matching. For small $p$, it improves known bounds $\tilde{O}(n^{3/2})$ for bipartite graphs [Blikstad--v.d.Brand--Efron--Mukhopadhyay--Nanongkai, FOCS 2022] and $O(n^{7/4})$ for general graphs [Kimmel--Witter, WADS 2021]. <br/>
+                
+                <b>Lower bounds on parameterized quantum query complexity.</b>
+                We also present lower bounds on the quantum query complexities of the $k$-vertex cover and $k$-matching problems. The lower bounds prove the optimality of the above parameterized quantum query algorithms up to a constant factor when $k$ is small. Indeed, the quantum query complexities of the $k$-vertex cover and $k$-matching problems are both $\Theta(\sqrt{k} n)$ when $k = O(\sqrt{n})$ and $k = O(n^{2/3})$, respectively.
+                
             </div>
         </span>
         </div>
@@ -132,9 +142,9 @@ I have a interest in the design and analysis of algorithms in theoretical comput
         <input id="icalp2024" class="inputcss" type="checkbox" />
         <span class="boxshow">
             <div class="box6">
-            We consider fast algorithms for monotone submodular maximization with a general matroid constraint. We present a randomized $(1 - 1/e - \varepsilon)$-approximation algorithm that requires $\tilde{O}_{\varepsilon}(\sqrt{r} n)$ independence oracle and value oracle queries, where $n$ is the number of elements in the matroid and $r \leq n$ is the rank of the matroid. This improves upon the previously best algorithm by Buchbinder-Feldman-Schwartz [Mathematics of Operations Research 2017] that requires $\tilde{O}_{\varepsilon}(r^2 + \sqrt{r}n)$ queries.  <br />
+                We consider fast algorithms for monotone submodular maximization with a general matroid constraint. We present a randomized $(1 - 1/e - \varepsilon)$-approximation algorithm that requires $\tilde{O}_{\varepsilon}(\sqrt{r} n)$ independence oracle and value oracle queries, where $n$ is the number of elements in the matroid and $r \leq n$ is the rank of the matroid. This improves upon the previously best algorithm by Buchbinder-Feldman-Schwartz [Mathematics of Operations Research 2017] that requires $\tilde{O}_{\varepsilon}(r^2 + \sqrt{r}n)$ queries.  <br />
 
-            Our algorithm is based on continuous relaxation, as with other submodular maximization algorithms in the literature. To achieve subquadratic query complexity, we develop a new rounding algorithm, which is our main technical contribution. The rounding algorithm takes as input a point represented as a convex combination of $t$ bases of a matroid and rounds it to an integral solution. Our rounding algorithm requires $\tilde{O}(r^{3/2} t)$ independence oracle queries, while the previously best rounding algorithm by Chekuri-Vondr&aacute;k-Zenklusen [FOCS 2010] requires $O(r^2 t)$ independence oracle queries. A key idea in our rounding algorithm is to use a directed cycle of arbitrary length in an auxiliary graph, while the algorithm of Chekuri-Vondr&aacute;k-Zenklusen focused on directed cycles of length two. 
+                Our algorithm is based on continuous relaxation, as with other submodular maximization algorithms in the literature. To achieve subquadratic query complexity, we develop a new rounding algorithm, which is our main technical contribution. The rounding algorithm takes as input a point represented as a convex combination of $t$ bases of a matroid and rounds it to an integral solution. Our rounding algorithm requires $\tilde{O}(r^{3/2} t)$ independence oracle queries, while the previously best rounding algorithm by Chekuri-Vondr&aacute;k-Zenklusen [FOCS 2010] requires $O(r^2 t)$ independence oracle queries. A key idea in our rounding algorithm is to use a directed cycle of arbitrary length in an auxiliary graph, while the algorithm of Chekuri-Vondr&aacute;k-Zenklusen focused on directed cycles of length two. 
             </div>
         </span>
         </div>
@@ -149,9 +159,9 @@ I have a interest in the design and analysis of algorithms in theoretical comput
         <input id="icalp2023" class="inputcss" type="checkbox" />
         <span class="boxshow">
             <div class="box6">
-            In the matroid partitioning problem, we are given $k$ matroids $\mathcal{M}_1 = (V, \mathcal{I}_1), \dots , \mathcal{M}_k = (V, \mathcal{I}_k)$ defined over a common ground set $V$ of $n$ elements, and we need to find a partitionable set $S \subseteq V$ of largest possible cardinality, denoted by $p$. Here, a set $S \subseteq V$ is called partitionable  if there exists a partition $(S_1, \dots , S_k)$ of $S$ with $S_i \in \mathcal{I}_i$ for $i = 1, \ldots, k$. In 1986, Cunningham [SICOMP 1986] presented a matroid partition algorithm that uses $O(n p^{3/2} + k n)$ independence oracle queries, which was the previously known best algorithm. This query complexity is $O(n^{5/2})$ when $k \leq n$. <br />
+                In the matroid partitioning problem, we are given $k$ matroids $\mathcal{M}_1 = (V, \mathcal{I}_1), \dots , \mathcal{M}_k = (V, \mathcal{I}_k)$ defined over a common ground set $V$ of $n$ elements, and we need to find a partitionable set $S \subseteq V$ of largest possible cardinality, denoted by $p$. Here, a set $S \subseteq V$ is called partitionable  if there exists a partition $(S_1, \dots , S_k)$ of $S$ with $S_i \in \mathcal{I}_i$ for $i = 1, \ldots, k$. In 1986, Cunningham [SICOMP 1986] presented a matroid partition algorithm that uses $O(n p^{3/2} + k n)$ independence oracle queries, which was the previously known best algorithm. This query complexity is $O(n^{5/2})$ when $k \leq n$. <br />
 
-            Our main result is to present a matroid partition algorithm that uses $\tilde{O}(k^{1/3} n p + k n)$ independence oracle queries, which is $\tilde{O}(n^{7/3})$ when $k \leq n$. This improves upon previous Cunningham's algorithm. To obtain this, we present a new approach \emph{edge recycling augmentation}, which can be attained through new ideas: an efficient utilization of the binary search technique by Nguy$\tilde{{\hat{\text{e}}}}$n [2019] and Chakrabarty-Lee-Sidford-Singla-Wong [FOCS 2019] and a careful analysis of the number of independence oracle queries. Our analysis differs significantly from the one for matroid intersection algorithms, because of the parameter $k$. We also present a matroid partition algorithm that uses $\tilde{O}((n + k) \sqrt{p})$ rank oracle queries.
+                Our main result is to present a matroid partition algorithm that uses $\tilde{O}(k^{1/3} n p + k n)$ independence oracle queries, which is $\tilde{O}(n^{7/3})$ when $k \leq n$. This improves upon previous Cunningham's algorithm. To obtain this, we present a new approach \emph{edge recycling augmentation}, which can be attained through new ideas: an efficient utilization of the binary search technique by Nguy$\tilde{{\hat{\text{e}}}}$n [2019] and Chakrabarty-Lee-Sidford-Singla-Wong [FOCS 2019] and a careful analysis of the number of independence oracle queries. Our analysis differs significantly from the one for matroid intersection algorithms, because of the parameter $k$. We also present a matroid partition algorithm that uses $\tilde{O}((n + k) \sqrt{p})$ rank oracle queries.
             </div>
         </span>
         </div>
@@ -166,17 +176,17 @@ I have a interest in the design and analysis of algorithms in theoretical comput
             <input id="isaac2022" class="inputcss" type="checkbox" />
             <span class="boxshow">
                 <div class="box6">
-                For an undirected graph $G$ and distinct vertices $s_1, t_1, \dots, s_k, t_k$ called terminals, 
-                the {\em shortest $k$-disjoint paths problem} asks for $k$ pairwise vertex-disjoint paths $P_1, \dots , P_k$ 
-                such that $P_i$ connects $s_i$ and $t_i$ for $i = 1, \dots , k$ and the sum of their lengths is minimized.
-                This problem is a natural optimization version of the well-known $k$-disjoint paths problem, 
-                and its polynomial solvability is widely open. 
-                One of the best results on the shortest $k$-disjoint paths problem is due to Datta et al. [FSTTCS 2018], 
-                who present a polynomial-time algorithm for the case when $G$ is planar and all the terminals are on one face. 
-                In this paper, we extend this result by giving a polynomial-time randomized algorithm for the case when 
-                all the terminals except one are on some face of $G$. 
-                In our algorithm, we combine the arguments of Datta et al.~with some results on the shortest disjoint $(A + B)$-paths problem shown by Hirai and Namba [Algorithmica 2018]. 
-                To this end, we present a non-trivial bijection between $k$ disjoint paths and disjoint $(A + B)$-paths, which is a key technical contribution of this paper.
+                    For an undirected graph $G$ and distinct vertices $s_1, t_1, \dots, s_k, t_k$ called terminals, 
+                    the shortest $k$-disjoint paths problem asks for $k$ pairwise vertex-disjoint paths $P_1, \dots , P_k$ 
+                    such that $P_i$ connects $s_i$ and $t_i$ for $i = 1, \dots , k$ and the sum of their lengths is minimized.
+                    This problem is a natural optimization version of the well-known $k$-disjoint paths problem, 
+                    and its polynomial solvability is widely open. 
+                    One of the best results on the shortest $k$-disjoint paths problem is due to Datta et al. [FSTTCS 2018], 
+                    who present a polynomial-time algorithm for the case when $G$ is planar and all the terminals are on one face. 
+                    In this paper, we extend this result by giving a polynomial-time randomized algorithm for the case when 
+                    all the terminals except one are on some face of $G$. 
+                    In our algorithm, we combine the arguments of Datta et al.~with some results on the shortest disjoint $(A + B)$-paths problem shown by Hirai and Namba [Algorithmica 2018]. 
+                    To this end, we present a non-trivial bijection between $k$ disjoint paths and disjoint $(A + B)$-paths, which is a key technical contribution of this paper.
                 </div>
             </span>
             </div>
