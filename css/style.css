@@ -133,3 +133,14 @@ hr {
 a {
 	text-decoration: none;
   }
+
+.box6 {
+    padding: 0.5em 1em;
+    margin: 0.3em 0;
+    background: #ffefd5;
+    border: dashed 2px #ffa500;
+}
+.box6 p {
+    margin: 0; 
+    padding: 0;
+}
