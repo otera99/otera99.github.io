@@ -78,6 +78,15 @@ h4 {
     background-color: #a7afe9;
 }
 
+h5 {
+	margin: 5px 15px 5px 20px;
+	padding: 3px;
+	font-weight: normal;
+	font-size: 18px;
+	clear: both;
+	background-color: #daf3d8;
+}
+
 p {
 	margin: 5px 15px 5px 20px;
 	padding: 0;
