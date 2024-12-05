@@ -134,17 +134,18 @@ I have a interest in the design and analysis of algorithms in theoretical comput
     </li>
 
     <li>
-        <strong>Faster Matroid Partition Algorithms</strong> [<a href="https://arxiv.org/abs/2303.05920">arXiv</a>, <a href="https://drops.dagstuhl.de/opus/volltexte/2023/18156/pdf/LIPIcs-ICALP-2023-104.pdf">proceeding</a>, <a href="eslide/2023.07.14.ICALP.pdf">slide@ICALP</a>]<br />
+        <strong>Faster Matroid Partition Algorithms</strong> [<a href="https://dl.acm.org/doi/10.1145/3707208">journal</a>, <a href="https://arxiv.org/abs/2303.05920">arXiv</a>, <a href="https://drops.dagstuhl.de/opus/volltexte/2023/18156/pdf/LIPIcs-ICALP-2023-104.pdf">proceeding</a>, <a href="eslide/2023.07.14.ICALP.pdf">slide@ICALP</a>]<br />
         Tatsuya Terao <br />
-        Proceedings of the 50th EATCS International Colloquium on Automata, Languages and Programming (<strong>ICALP 2023</strong>) <br />
+        To appear in ACM Transactions on Algorithms (<strong>TALG</strong>) <br />
+        Preliminary version appeared in proceedings of the 50th EATCS International Colloquium on Automata, Languages and Programming (<strong>ICALP 2023</strong>) <br />
         <div class="openbox">
         <label for="icalp2023">▼ Abstract</label>
         <input id="icalp2023" class="inputcss" type="checkbox" />
         <span class="boxshow">
             <div class="box6">
-                In the matroid partitioning problem, we are given $k$ matroids $\mathcal{M}_1 = (V, \mathcal{I}_1), \dots , \mathcal{M}_k = (V, \mathcal{I}_k)$ defined over a common ground set $V$ of $n$ elements, and we need to find a partitionable set $S \subseteq V$ of largest possible cardinality, denoted by $p$. Here, a set $S \subseteq V$ is called partitionable  if there exists a partition $(S_1, \dots , S_k)$ of $S$ with $S_i \in \mathcal{I}_i$ for $i = 1, \ldots, k$. In 1986, Cunningham [SICOMP 1986] presented a matroid partition algorithm that uses $O(n p^{3/2} + k n)$ independence oracle queries, which was the previously known best algorithm. This query complexity is $O(n^{5/2})$ when $k \leq n$. <br />
+                In the matroid partitioning problem, we are given $k$ matroids $\mathcal{M}_1 = (V, \mathcal{I}_1), \dots , \mathcal{M}_k = (V, \mathcal{I}_k)$ defined over a common ground set $V$ of $n$ elements, and we need to find a partitionable set $S \subseteq V$ of largest possible cardinality, denoted by $p$. Here, a set $S \subseteq V$ is called partitionable  if there exists a partition $(S_1, \dots , S_k)$ of $S$ with $S_i \in \mathcal{I}_i$ for $i = 1, \ldots, k$. In 1986, Cunningham~[SICOMP 1986] presented a matroid partition algorithm that uses $O(n p^{3/2} + k n)$ independence oracle queries, which was the previously known best algorithm. This query complexity is $O(n^{5/2})$ when $k \leq n$. <br />
 
-                Our main result is to present a matroid partition algorithm that uses $\tilde{O}(k^{1/3} n p + k n)$ independence oracle queries, which is $\tilde{O}(n^{7/3})$ when $k \leq n$. This improves upon previous Cunningham's algorithm. To obtain this, we present a new approach \emph{edge recycling augmentation}, which can be attained through new ideas: an efficient utilization of the binary search technique by Nguy$\tilde{{\hat{\text{e}}}}$n [2019] and Chakrabarty-Lee-Sidford-Singla-Wong [FOCS 2019] and a careful analysis of the number of independence oracle queries. Our analysis differs significantly from the one for matroid intersection algorithms, because of the parameter $k$. We also present a matroid partition algorithm that uses $\tilde{O}((n + k) \sqrt{p})$ rank oracle queries.
+                Our main result is to present a matroid partition algorithm that uses $\tilde{O}(k'^{1/3} n p + k n)$ independence oracle queries, where $k' = \min\{k, p\}$. This query complexity is $\tilde{O}(n^{7/3})$ when $k \leq n$, which improves upon that of Cunningham's algorithm. To obtain our algorithm, we present a new approach <i>edge recycling augmentation</i>, which can be attained through new ideas: an efficient utilization of the binary search technique by Nguy$\tilde{{\hat{\text{e}}}}$n~[2019] and Chakrabarty-Lee-Sidford-Singla-Wong~[FOCS 2019] and a careful analysis of the independence oracle query complexity. Our analysis differs significantly from the one for matroid intersection algorithms, because of the parameter $k$. We also present a matroid partition algorithm that uses $\tilde{O}((n + k) \sqrt{p})$ rank oracle queries.
             </div>
         </span>
         </div>
