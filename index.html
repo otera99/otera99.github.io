@@ -1,6 +1,10 @@
-<html>
+<html lang="en">
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" CONTENT="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-41JZ6X4N12"></script>
 <script>
@@ -11,6 +15,7 @@
   gtag('config', 'G-41JZ6X4N12');
 </script>
 
+<!-- MathJax -->
 <script>
 MathJax = {
     tex: {
@@ -50,13 +55,18 @@ MathJax = {
     font-size: 14px;
 }
 
-body {
-  font-family: 'Comic Sans MS', 'Comic Sans';
+.collapsing {
+    transition: height 0.35s ease;
+}
+
+@font-face {
+    font-family: "Comic Sans MS";
+    src: url("fonts/Comic_Sans_MS.ttf");
 }
 </style>
 
 
-<body bgcolor="#FFFFFF">
+<body style='font-family: "Comic Sans MS", "Comic Sans";'>
 
 <h2><strong>Tatsuya Terao (<font face="Osaka">寺尾 樹哉</font>)</strong>
 </h2>
@@ -67,6 +77,7 @@ body {
 
 <hr>
 
+<p><font size="5">About Me</font></p>
 <p>I am Tatsuya Terao, a first-year doctoral student in <a href="https://www.kurims.kyoto-u.ac.jp/coss/index-e.html">Discrete Optimization Group</a> at <a href="https://www.kurims.kyoto-u.ac.jp/en/index.html">Research Institute for Mathematical Sciences</a> and I am fortunate to be advised by <a href="https://www.kurims.kyoto-u.ac.jp/~yusuke/eindex.html">Yusuke Kobayashi</a>.
 I have a interest in the design and analysis of algorithms in theoretical computer science.
 
@@ -94,7 +105,7 @@ I have a interest in the design and analysis of algorithms in theoretical comput
 
 <h5>Refereed Papers</h5>
 
-<ol>
+<ol reversed>
     <li>
         <strong>Parameterized Quantum Query Algorithms for Graph Problems</strong> &dagger; [<a href="https://arxiv.org/abs/2408.03864">arXiv</a>, <a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol308-esa2024/LIPIcs.ESA.2024.99/LIPIcs.ESA.2024.99.pdf">proceeding</a>, <a href="eslide/2024.09.04.ESA.pdf">slides@ESA</a>] <br />
         Tatsuya Terao, <a href="https://q.c.titech.ac.jp/mori/">Ryuhei Mori</a> <br />
@@ -182,7 +193,7 @@ I have a interest in the design and analysis of algorithms in theoretical comput
 </ol>
 
 <h5>Manuscripts</h5>
-<ol>
+<ol reversed>
     <li>
         <strong>Deterministic $(2/3 - \varepsilon)$-Approximation of Matroid Intersection using Nearly-Linear Independence-Oracle Queries</strong> [<a href="https://arxiv.org/abs/2410.18820">arXiv</a>]<br />
         Tatsuya Terao <br />
@@ -199,5 +210,8 @@ I have a interest in the design and analysis of algorithms in theoretical comput
 </ol>
 
 <hr>
+
+<p><a href="rejections.txt">My rejection history</a></p>
+
 </body>
 </html>
