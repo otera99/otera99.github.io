@@ -186,3 +186,7 @@ section {
     list-style-type: none;
     padding-left: 0; 
 }
+
+.color-box {
+	background-color: #daf3d8;
+}

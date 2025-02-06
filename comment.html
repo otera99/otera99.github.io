@@ -1,0 +1,98 @@
+<html>
+
+<head>
+<script>
+MathJax = {
+    tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+};
+</script>
+<script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+<!-- <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".sidebar a").forEach(anchor => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute("href").substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+            });
+        });
+    });
+</script> -->
+
+<title>論文のコメント</title>
+<link href="css/style.css" rel="stylesheet" media="all">
+<meta charset="UTF-8">
+</head>
+
+<style>
+@font-face {
+    font-family: "Comic Sans MS";
+    src: url("fonts/Comic_Sans_MS.ttf");
+}
+@font-face {
+    font-family: "Mamelon";
+    src: url("fonts/Mamelon-4-Hi-Regular.otf");
+}
+</style>
+
+<body style='font-family: "Comic Sans MS", "Mamelon"'>
+
+<h3><strong>論文のコメント</strong>
+</h3>
+
+<p><a href="https://www.ms.u-tokyo.ac.jp/~yasuyuki/bib.htm">河東先生</a>や<a href="https://member.ipmu.jp/yuji.tachikawa/comments.html">立川先生</a>にならって，論文の背景についてコメントしています．</p>
+
+
+<ul>
+    <li>
+        <div class="color-box">
+        <strong>Deterministic $(2/3 - \varepsilon)$-Approximation of Matroid Intersection using Nearly-Linear Independence-Oracle Queries</strong> <br />
+        Tatsuya Terao <br />
+        </div>
+        <p>TODO</p>
+    </li>
+    <li>
+        <div class="color-box">
+        <strong>Parameterized Quantum Query Algorithms for Graph Problems</strong>  <br />
+        Tatsuya Terao, Ryuhei Mori <br />
+        </div>
+        <p>TODO</p>
+    </li>
+    <li>
+        <div class="color-box">
+        <strong>Subquadratic Submodular Maximization with a General Matroid Constraint</strong> <br />
+        Yusuke Kobayashi, Tatsuya Terao <br />
+        </div>
+        <p>ICALP'23で自分の発表のちょうど次の発表が，特殊なマトロイド制約で劣モジュラ関数最大化を高速化するという<a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2023.74">論文</a>についてだった．それを聞いている時に，一般のマトロイドでオラクルの設定で，(最近のマトロイド交叉の高速化に使われている)二分探索のテクニックを使って高速化できないだろうかと思った．帰って，(マトロイド制約での劣モジュラ最大化のアルゴリズムの肝となる) swap roundingの論文についてゼミで小林先生と話している時に，小林先生が(マトロイド交叉のアルゴリズムに用いる)交換可能グラフのような補助グラフの中で有向サイクルを高速に見つけることができれば，丸めアルゴリズムが高速化できてことに気が付く．同じ週の週末に，実家のこたつで，<a href="https://lealgorithm.blogspot.com/2021/10/15.html">清水先生のブログに載っているアルゴリズム</a>のことをふと思い出し，そこから着想を得て，$\tilde{O}(\sqrt{r})$個の頂点をグラフからサンプルするアルゴリズムを思いつく．次の週に小林先生に話し，アルゴリズムに微妙に誤りはあったが，ほぼ同じアイデアでうまく修正することができ，論文化できた．これがICALP'24に通ったのもめでたい．あとにでた<a href="https://ieeexplore.ieee.org/abstract/document/10756170?casa_token=UF0FXotrM7IAAAAA:YGLO2kpagK6Jspj91jfBsFHz_e5QH_h3OcOdpSMBW7_N2J8LN1dgunY7Gtyj7Lr6u4kkA_HdmZo">論文</a>で計算量は抜かれたが，そのあとに出た現状最速の<a href="https://arxiv.org/abs/2409.14325">論文</a>では我々のアルゴリズムを使用している．(連続最適化の部分が高速化された．)
+        </p>
+    </li>
+    <li>
+        <div class="color-box">
+        <strong>Faster Matroid Partition Algorithms</strong> <br />
+        Tatsuya Terao <br />
+        </div>
+        <p>(競プロ出身なので，)アルゴリズムの高速化をやりたいと思っていたので，興味があったマトロイド交叉の最近の高速化のブレイクスルーの論文をいくつか読んでみることにした．それで何をしようかと思った時，マトロイド交叉の長らく最速だった<a href="https://epubs.siam.org/doi/abs/10.1137/0215066?casa_token=uclMCDW46mkAAAAA:bf9bDQcvzIV1qs2dKjE2KgaEWvbJb4PI_LryR45depKmBuOQ-kHCwgtStN8bDxkFG3afMFxVnsq7">Cunninghamの論文</a>が，マトロイド分割に対しても最速のアルゴリズムを提案していたので，安直だが，マトロイド分割も(最近のマトロイド交叉の高速化に使われている)二分探索のテクニックを使って高速化できないだろうかと思う．ちょっと考えると，マトロイドの個数$k$が小さい時には簡単に高速化できることが分かったが，流石に簡単すぎるのでこれでは論文にはできないなとなる．そこで，$k$が大きい時も高速化できないだろうかと考えることにする．考え始めてから1ヶ月ほどして，Cunninghamの論文で肝となっている補題(私の論文のarXiv版ではLemma 2.10)をうまく使うと，平方分割的なことができることに気が付く．このアイデアでかなり簡単に$k$が大きい場合でも改善できることが確認でき，その後，もう少し解析を精緻化させて論文化した．コルテとフィーゲンによる組合せ最適化の有名な教科書の最初の方に重要な問題として80問ほど載っている中の一つの問題に対して，最速のアルゴリズムを与えられたのはめちゃくちゃ嬉しいし，ICALPに単著を通せたのもとても嬉しい．</p>
+    </li>
+    <li>
+        <div class="color-box">
+        <strong>One-Face Shortest Disjoint Paths with a Deviation Terminal</strong> <br />
+        Yusuke Kobayashi, Tatsuya Terao <br />
+        </div>
+        <p>TODO</p>
+    </li>
+</ul>
+</section>
+
+
+<hr>
+
+</body>
+</html>
