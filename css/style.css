@@ -190,3 +190,11 @@ section {
 .color-box {
 	background-color: #daf3d8;
 }
+
+.footer-left {
+	text-align: left;  
+	float: left;  
+}
+.footer-right {
+	text-align: right; 
+}
