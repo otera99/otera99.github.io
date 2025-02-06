@@ -57,14 +57,15 @@ MathJax = {
         <strong>Deterministic $(2/3 - \varepsilon)$-Approximation of Matroid Intersection using Nearly-Linear Independence-Oracle Queries</strong> <br />
         Tatsuya Terao <br />
         </div>
-        <p>TODO</p>
+        <p>Coming soon.</p>
     </li>
     <li>
         <div class="color-box">
         <strong>Parameterized Quantum Query Algorithms for Graph Problems</strong>  <br />
         Tatsuya Terao, Ryuhei Mori <br />
         </div>
-        <p>TODO</p>
+        <p>森先生のもとで量子アルゴリズムを研究するRAとして雇っていただいていたが，最初やろうとしていたことがあまり上手くいかず，自分の興味を持った量子のクエリ計算量の計算量を考えてみることに．森先生がパラメータ化計算量を量子クエリの設定で考えられないかと言うので，(古典の)FPTについて色々サーベイしてみることに．そして，$k$-vertex coverに対するほとんど知られていない$O(3^k n)$時間のアルゴリズム(サーベイしている時に，<a href="https://www.research-collection.ethz.ch/bitstream/handle/20.500.11850/69332/eth-4359-01.pdf">[Stege-Fellow '99]</a>のSection3.2からみつけた<a href="https://www.sciencedirect.com/science/article/pii/S0022000096900586">[Papadimitriou-Yannakakis '96]</a>が発見した極大マッチングを使ったアルゴリズム)から着想を得て,
+            $k$-vertex coverが$O(kn)$量子クエリで(隣接行列モデルの設定で)解けることに気が付く．ただ，下界を考えると$O(\sqrt{k} n)$クエリとなりギャップがあった．その後，夜道を歩いている時に，FPTの教科書でみたkernelizationのreduction ruleを極大マッチングの端点のみに適用するというアイデアを思いつく．これで，$k$が小さい時には上界と下界を一致させることができた．この半年後くらいに，量子クエリの設定と分散計算の設定って近いんだよなと思い(例えば，Le Galls先生のtriangle finding研究)，$k$-vertex coverのアイデアを分散計算にも適用できないかなと思いつく．ちょっと調べると，<a href="https://arxiv.org/abs/1807.04900">実は近いことはやられている</a>ことがわかり，論文を読んでみると，逆に，分散の$k$-matchingのアルゴリズムが量子のクエリの設定に使えるのではと思いつく．それでこの二つを組合せて論文化した．(最初に思いついた，k-matchingの量子クエリアルゴリズムは実は間違えていて，これをRIMS内のゼミで発表した時に，牧野先生に指摘された．)</p>
     </li>
     <li>
         <div class="color-box">
@@ -79,14 +80,14 @@ MathJax = {
         <strong>Faster Matroid Partition Algorithms</strong> <br />
         Tatsuya Terao <br />
         </div>
-        <p>(競プロ出身なので，)アルゴリズムの高速化をやりたいと思っていたので，興味があったマトロイド交叉の最近の高速化のブレイクスルーの論文をいくつか読んでみることにした．それで何をしようかと思った時，マトロイド交叉の長らく最速だった<a href="https://epubs.siam.org/doi/abs/10.1137/0215066?casa_token=uclMCDW46mkAAAAA:bf9bDQcvzIV1qs2dKjE2KgaEWvbJb4PI_LryR45depKmBuOQ-kHCwgtStN8bDxkFG3afMFxVnsq7">Cunninghamの論文</a>が，マトロイド分割に対しても最速のアルゴリズムを提案していたので，安直だが，マトロイド分割も(最近のマトロイド交叉の高速化に使われている)二分探索のテクニックを使って高速化できないだろうかと思う．ちょっと考えると，マトロイドの個数$k$が小さい時には簡単に高速化できることが分かったが，流石に簡単すぎるのでこれでは論文にはできないなとなる．そこで，$k$が大きい時も高速化できないだろうかと考えることにする．考え始めてから1ヶ月ほどして，Cunninghamの論文で肝となっている補題(私の論文のarXiv版ではLemma 2.10)をうまく使うと，平方分割的なことができることに気が付く．このアイデアでかなり簡単に$k$が大きい場合でも改善できることが確認でき，その後，もう少し解析を精緻化させて論文化した．コルテとフィーゲンによる組合せ最適化の有名な教科書の最初の方に重要な問題として80問ほど載っている中の一つの問題に対して，最速のアルゴリズムを与えられたのはめちゃくちゃ嬉しいし，ICALPに単著を通せたのもとても嬉しい．</p>
+        <p>(競プロ出身なので，)アルゴリズムの高速化をやりたいと思っていたので，興味があったマトロイド交叉の最近の高速化のブレイクスルーの論文をいくつか読んでみることにした．それで何をしようかと思った時，マトロイド交叉の長らく最速だった<a href="https://epubs.siam.org/doi/abs/10.1137/0215066?casa_token=uclMCDW46mkAAAAA:bf9bDQcvzIV1qs2dKjE2KgaEWvbJb4PI_LryR45depKmBuOQ-kHCwgtStN8bDxkFG3afMFxVnsq7">Cunninghamの論文</a>が，マトロイド分割に対しても最速のアルゴリズムを提案していたので，安直だが，マトロイド分割も(最近のマトロイド交叉の高速化に使われている)二分探索のテクニックを使って高速化できないだろうかと思う．ちょっと考えると，マトロイドの個数$k$が小さい時には簡単に高速化できることが分かったが，流石に簡単すぎるのでこれでは論文にはできないなとなる．そこで，$k$が大きい時も高速化できないだろうかと考えることにする．考え始めてから1ヶ月ほどして，Cunninghamの論文で肝となっている補題(私の論文のarXiv版ではLemma 2.10)をうまく使うと，平方分割的なことができることに気が付く．このアイデアでかなり簡単に$k$が大きい場合でも改善できることが確認でき，その後，もう少し解析を精緻化させて論文化した．コルテとフィーゲンによる組合せ最適化の有名な教科書の最初の方に組合せ最適化の重要な問題として80問ほど載っている中の一つの問題に対して，最速のアルゴリズムを与えられたのはめちゃくちゃ嬉しいし，ICALPに単著を通せたのもとても嬉しい．</p>
     </li>
     <li>
         <div class="color-box">
         <strong>One-Face Shortest Disjoint Paths with a Deviation Terminal</strong> <br />
         Yusuke Kobayashi, Tatsuya Terao <br />
         </div>
-        <p>TODO</p>
+        <p>修士に合格してから，(B4の後半ごろ)最初はGomory-Hu treeの高速化の論文を読んでいたが，ちょっとこれで論文を書くのは厳しいとなって，卒論の代わりとして，小林先生がやっていたshortest disjoint pathsの研究を少しすることに．<a href="https://epubs.siam.org/doi/10.1137/18M1223034">Bj&#246;rklundとHusfeldtの論文</a>から始まったいくつかの関連研究から膨らませて研究することになった．競プロで培った実験からoeisからエスパーする能力も少し役立てて，(というか，自分の貢献がほとんどそこしかない，)論文を書いた．この論文の大部分は小林先生のおかげなので，小林先生に感謝したい．</p>
     </li>
 </ul>
 </section>
