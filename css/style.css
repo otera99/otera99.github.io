@@ -161,16 +161,20 @@ a {
 }
 
 .side {
-	width: 13%;
-	float: left;
+	/* width: 13%; */
+	/* float: left; */
+	width: 160px;
+	padding: 3px;
+	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 	background-color: #ccffffb0;
     position: fixed;
     height: 100%;
     overflow-y: auto;
 }
 .content {
-	width: 86%;
-	float: right;
+	/* width: 86%;
+	float: right; */
+	margin-left: 170px;
 	flex: 1;
 }
 
