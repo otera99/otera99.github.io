@@ -53,11 +53,11 @@ header {
 }
 
 h2 {
-	margin: 15px 5px 5px 8px;
+	margin: 0px 5px 5px 8px;
 	padding: 15px;
 	font-weight: normal;
 	font-size: 30px;
-	clear: both;
+	/* clear: both; */
     background-color: #daf3d8;
 }
 
@@ -176,6 +176,10 @@ a {
 	float: right; */
 	margin-left: 170px;
 	flex: 1;
+	/* position: relative;
+	display: flex;
+    flex-direction: column; */
+    /* align-items: flex-start; */
 }
 
 section {
@@ -197,4 +201,20 @@ section {
 }
 .footer-right {
 	text-align: right; 
+}
+
+/* .photo-container {
+    align-self: flex-end;
+} */
+
+img.photo {
+    max-width: 400px; 
+    max-height: 400px; 
+	float: right;
+}
+
+@media only screen and (max-width: 480px) {
+    img.photo {
+        display: none !important;
+    }
 }

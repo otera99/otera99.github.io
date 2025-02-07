@@ -27,6 +27,7 @@ MathJax = {
     });
 </script> -->
 
+
 <title>寺尾 樹哉 (Tatsuya Terao)</title>
 <link href="css/style.css" rel="stylesheet" media="all">
 <meta charset="UTF-8">
@@ -68,8 +69,34 @@ MathJax = {
 
 <div class="content">
 
+<!-- <div class="photo-container"> -->
+    <img id="random-photo" class="photo" alt="写真">
+    <script>
+        function getRandomImage() {
+            const images = [
+                { src: "photos/cat.png", probability: 50 },
+                { src: "photos/penguin.png", probability: 50 },
+            ];
+
+            let rand = Math.random() * 100;
+            let cumulative = 0;
+
+            for (const img of images) {
+                cumulative += img.probability;
+                if (rand < cumulative) {
+                    return img.src;
+                }
+            }
+        }
+
+        document.getElementById("random-photo").src = getRandomImage();
+    </script>
+<!-- </div> -->
+
 <h2><strong>寺尾 樹哉 (Tatsuya Terao)</strong>
 </h2>
+
+<br>
 
 <p><font size="4">京都大学 数理解析研究所 博士後期課程1年</font></p>
 <p><font size="4">
