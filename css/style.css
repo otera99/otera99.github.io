@@ -208,8 +208,8 @@ section {
 } */
 
 img.photo {
-    max-width: 400px; 
-    max-height: 400px; 
+    max-width: 35%; 
+    max-height: 35%; 
 	float: right;
 }
 
