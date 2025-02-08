@@ -203,14 +203,14 @@ section {
 	text-align: right; 
 }
 
-/* .photo-container {
-    align-self: flex-end;
-} */
-
 img.photo {
-    max-width: 35%; 
-    max-height: 35%; 
+    max-width: 37%; 
+    max-height: 37%; 
 	float: right;
+	/* margin: 1%; */
+	background-color: white; 
+    padding: 1%;
+	border: 2px solid gray; 
 }
 
 @media only screen and (max-width: 480px) {
