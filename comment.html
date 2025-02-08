@@ -48,6 +48,8 @@ MathJax = {
 <h3><strong>論文のコメント</strong>
 </h3>
 
+<div class="naiyou">
+
 <p><a href="https://www.ms.u-tokyo.ac.jp/~yasuyuki/bib.htm">河東先生</a>や<a href="https://member.ipmu.jp/yuji.tachikawa/comments.html">立川先生</a>にならって，論文の背景についてコメントしています．</p>
 
 
@@ -64,7 +66,7 @@ MathJax = {
         <strong>Parameterized Quantum Query Algorithms for Graph Problems</strong>  <br />
         Tatsuya Terao, Ryuhei Mori <br />
         </div>
-        <p>森先生のもとで量子アルゴリズムを研究するRAとして雇っていただいていたが，最初やろうとしていたことがあまり上手くいかず，自分の興味を持った量子のクエリ計算量の計算量を考えてみることに．森先生がパラメータ化計算量を量子クエリの設定で考えられないかと言うので，(古典の)FPTについて色々サーベイしてみることに．そして，$k$-vertex coverに対するほとんど知られていない$O(3^k n)$時間のアルゴリズム(サーベイしている時に，<a href="https://www.research-collection.ethz.ch/bitstream/handle/20.500.11850/69332/eth-4359-01.pdf">[Stege-Fellow '99]</a>のSection3.2からみつけた<a href="https://www.sciencedirect.com/science/article/pii/S0022000096900586">[Papadimitriou-Yannakakis '96]</a>が発見した極大マッチングを使ったアルゴリズム)から着想を得て,
+        <p>森先生のもとで量子アルゴリズムを研究するRAとして雇っていただいていたが，最初やろうとしていたことがあまり上手くいかず，自分の興味を持った量子のクエリ計算量の計算量を考えてみることに．森先生がパラメータ化計算量を量子クエリの設定で考えられないかと言うので，(古典の)FPTについて色々サーベイしてみることに．そして，$k$-vertex coverに対するほとんど知られていない$O(3^k n)$時間のアルゴリズム(<a href="https://www.sciencedirect.com/science/article/pii/S0022000096900586">[Papadimitriou-Yannakakis '96]</a>が発見した極大マッチングを使ったアルゴリズム)から着想を得て,
             $k$-vertex coverが$O(kn)$量子クエリで(隣接行列モデルの設定で)解けることに気が付く．ただ，下界を考えると$O(\sqrt{k} n)$クエリとなりギャップがあった．その後，夜道を歩いている時に，FPTの教科書でみたkernelizationのreduction ruleを極大マッチングの端点のみに適用するというアイデアを思いつく．これで，$k$が小さい時には上界と下界を一致させることができた．この半年後くらいに，量子クエリの設定と分散計算の設定って近いんだよなと思い，$k$-vertex coverのアイデアを分散計算にも適用できないかなと思いつく．ちょっと調べると，<a href="https://arxiv.org/abs/1807.04900">実は近いことはやられている</a>ことがわかり，論文を読んでみると，逆に，分散の$k$-matchingのアルゴリズムが量子のクエリの設定に使えるのではと思いつく．それでこの二つを組合せて論文化した．</p>
     </li>
     <li>
@@ -87,17 +89,20 @@ MathJax = {
         <strong>One-Face Shortest Disjoint Paths with a Deviation Terminal</strong> <br />
         Yusuke Kobayashi, Tatsuya Terao <br />
         </div>
-        <p>卒論の代わりとして，小林先生がやっていたshortest disjoint pathsの研究を少しすることに．<a href="https://epubs.siam.org/doi/10.1137/18M1223034">Bj&#246;rklundとHusfeldtの論文</a>から始まったいくつかの関連研究から膨らませて研究することになった．競プロで培った実験からoeisからエスパーする能力も少し役立てて，(というか，自分の貢献がほとんどそこしかない，)論文を書いた．この論文の大部分は小林先生のおかげなので，小林先生に感謝したい．</p>
+        <p>卒論の代わりとして，小林先生がやっていたshortest disjoint pathsの研究を少しすることに．<a href="https://epubs.siam.org/doi/10.1137/18M1223034">Bj&#246;rklundとHusfeldtの論文</a>から始まったいくつかの関連研究から膨らませて研究することになった．この論文の大部分は小林先生のおかげなので，小林先生に感謝したい．</p>
     </li>
 </ul>
+</div>
 </section>
 
 
-<hr>
+<!-- <hr> -->
 
+<footer>
 <p style="text-align: right">
     <a href="index_ja.html">[トップページへ戻る]</a>
 </p>
+</footer>
 
 </body>
 </html>
