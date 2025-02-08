@@ -69,6 +69,9 @@ h2 {
     background-color: #daf3d8;
 	border-radius: 20px; 
 	/* display: inline-block; */
+
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
 h3 {
@@ -89,6 +92,10 @@ h4 {
 	clear: both;
     background-color: #a7afe9;
 	border-radius: 10px; 
+	padding-left: 15px;
+	padding-right: 15px;
+
+	/* display: inline-block; */
 }
 
 h5 {
@@ -99,6 +106,10 @@ h5 {
 	clear: both;
 	background-color: #daf3d8;
 	border-radius: 10px; 
+	padding-left: 12px;
+	padding-right: 12px;
+
+	/* display: inline-block; */
 }
 
 p {
@@ -177,13 +188,15 @@ a {
 	/* width: 13%; */
 	/* float: left; */
 	width: 160px;
-	padding: 3px;
+	padding: 5px 0px 30px 0px;
 	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 	background-color: #ccffff;
     position: fixed;
-    height: 100%;
+    height: 90%;
     overflow-y: auto;
 	border-radius: 20px; 
+
+	/* display: inline-block; */
 }
 .content {
 	/* width: 86%;
@@ -218,16 +231,17 @@ section {
 }
 
 img.photo {
-    max-width: 37%; 
-    max-height: 37%; 
+    max-width: 350px; 
+    max-height: 350px; 
 	float: right;
 	/* margin: 1%; */
 	background-color: white; 
     padding: 1%;
 	border: 2px solid gray; 
+	border-radius: 8px; 
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1048px) {
     img.photo {
         display: none !important;
     }
@@ -259,4 +273,15 @@ footer {
 	padding: 0.2% 0% 0.2% 0%;
 	margin: 0.2% 0% 0% 0%;
 	border-radius: 10px; 
+}
+
+p.underline {
+    border-bottom: dashed 2px green;
+}
+
+@media only screen and (min-width: 1049px) {
+    h2.withphoto {
+		display: inline-block;
+		/* max-width: calc(74% - 190px); */
+	}
 }
