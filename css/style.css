@@ -224,7 +224,7 @@ section {
 
 .footer-left {
 	text-align: left;  
-	float: left;  
+	/* float: left;   */
 }
 .footer-right {
 	text-align: right; 
@@ -283,5 +283,24 @@ p.underline {
     h2.withphoto {
 		display: inline-block;
 		/* max-width: calc(74% - 190px); */
+	}
+}
+
+@media only screen and (max-width: 480px) {
+    .side {
+		display: none !important;
+		position: static !important;
+		visibility: hidden !important; 
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+	}
+	.content {
+		margin-left: 10px;
+		flex: 1;
+	}
+
+	.footer-left {
+		display: none !important;
 	}
 }
