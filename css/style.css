@@ -224,7 +224,7 @@ section {
 
 .footer-left {
 	text-align: left;  
-	/* float: left;   */
+	float: left;  
 }
 .footer-right {
 	text-align: right; 
