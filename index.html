@@ -75,16 +75,18 @@ I have a interest in the design and analysis of algorithms in theoretical comput
 
 <h4><i class="bi bi-file-person"></i> CV</h4>
 <div class="naiyou">
+<p><font size="4"><a href="CV_Tatsuya_Terao.pdf">Click here to view my CV in PDF format.</a></font></p>
+
+<h5>Education</h5>
 <ul>
     <li>March 2024, Master of Science, Kyoto University</li>
     <li>March 2022, Bachelor of Science, Kyoto University</li>
 </ul>
 
+<h5>Professional Experience</h5>
 <ul>
     <li>April 2024 - March 2027, Research Fellow of the Japan Society for the Promotion of Science (DC1)</li>
 </ul>
-
-<p><a href="CV_Tatsuya_Terao.pdf"><font size="4">[CV in PDF format]</font></a></p>
 
 </div>
 
@@ -99,8 +101,7 @@ I have a interest in the design and analysis of algorithms in theoretical comput
 
 <ol reversed>
     <li>
-        <strong>Parameterized Quantum Query Algorithms for Graph Problems</strong> &dagger; [<a href="https://arxiv.org/abs/2408.03864">arXiv</a>, <a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol308-esa2024/LIPIcs.ESA.2024.99/LIPIcs.ESA.2024.99.pdf">proceeding</a>, <a href="eslide/2024.09.04.ESA.pdf">slides@ESA</a>] <br />
-        Tatsuya Terao, <a href="https://q.c.titech.ac.jp/mori/">Ryuhei Mori</a> <br />
+        <strong>Parameterized Quantum Query Algorithms for Graph Problems</strong> &dagger; <a href="https://arxiv.org/abs/2408.03864" class="paper-button">arXiv</a> <a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol308-esa2024/LIPIcs.ESA.2024.99/LIPIcs.ESA.2024.99.pdf" class="paper-button">proceeding</a> <a href="eslide/2024.09.04.ESA.pdf" class="slides-button">slides@ESA</a> <br />
         Proceedings of the 32nd Annual European Symposium on Algorithms (<strong>ESA 2024</strong>) <br />
         <div class="openbox">
         <label for="esa2024"><i class="bi bi-chevron-expand"></i> Abstract</label>
@@ -124,8 +125,7 @@ I have a interest in the design and analysis of algorithms in theoretical comput
     </li>
 
     <li>
-        <strong>Subquadratic Submodular Maximization with a General Matroid Constraint</strong> [<a href="https://arxiv.org/abs/2405.00359">arXiv</a>, <a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol297-icalp2024/LIPIcs.ICALP.2024.100/LIPIcs.ICALP.2024.100.pdf">proceeding</a>, <a href="eslide/2024.07.09.ICALP.pdf">slides@ICALP</a>]<br />
-        <a href="https://www.kurims.kyoto-u.ac.jp/~yusuke/eindex.html">Yusuke Kobayashi</a>, Tatsuya Terao <br />
+        <strong>Subquadratic Submodular Maximization with a General Matroid Constraint</strong> <a href="https://arxiv.org/abs/2405.00359" class="paper-button">arXiv</a> <a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol297-icalp2024/LIPIcs.ICALP.2024.100/LIPIcs.ICALP.2024.100.pdf" class="paper-button">proceeding</a> <a href="eslide/2024.07.09.ICALP.pdf" class="slides-button">slides@ICALP</a><br />
         Proceedings of the 51st EATCS International Colloquium on Automata, Languages and Programming (<strong>ICALP 2024</strong>) <br />
         <div class="openbox">
         <label for="icalp2024"><i class="bi bi-chevron-expand"></i> Abstract</label>
@@ -141,7 +141,7 @@ I have a interest in the design and analysis of algorithms in theoretical comput
     </li>
 
     <li>
-        <strong>Faster Matroid Partition Algorithms</strong> [<a href="https://dl.acm.org/doi/10.1145/3707208">journal</a>, <a href="https://arxiv.org/abs/2303.05920">arXiv</a>, <a href="https://drops.dagstuhl.de/opus/volltexte/2023/18156/pdf/LIPIcs-ICALP-2023-104.pdf">proceeding</a>, <a href="eslide/2023.07.14.ICALP.pdf">slides@ICALP</a>]<br />
+        <strong>Faster Matroid Partition Algorithms</strong> <a href="https://dl.acm.org/doi/10.1145/3707208" class="paper-button">journal</a> <a href="https://arxiv.org/abs/2303.05920" class="paper-button">arXiv</a> <a href="https://drops.dagstuhl.de/opus/volltexte/2023/18156/pdf/LIPIcs-ICALP-2023-104.pdf" class="paper-button">proceeding</a> <a href="eslide/2023.07.14.ICALP.pdf" class="slides-button">slides@ICALP</a><br />
         Tatsuya Terao <br />
         ACM Transactions on Algorithms (<strong>TALG</strong>), 2025 <br />
         A preliminary version appeared in Proceedings of the 50th EATCS International Colloquium on Automata, Languages and Programming (<strong>ICALP 2023</strong>) <br />
@@ -150,16 +150,16 @@ I have a interest in the design and analysis of algorithms in theoretical comput
         <input id="icalp2023" class="inputcss" type="checkbox" />
         <span class="boxshow">
             <div class="box6">
-                In the matroid partitioning problem, we are given $k$ matroids $\mathcal{M}_1 = (V, \mathcal{I}_1), \dots , \mathcal{M}_k = (V, \mathcal{I}_k)$ defined over a common ground set $V$ of $n$ elements, and we need to find a partitionable set $S \subseteq V$ of largest possible cardinality, denoted by $p$. Here, a set $S \subseteq V$ is called partitionable  if there exists a partition $(S_1, \dots , S_k)$ of $S$ with $S_i \in \mathcal{I}_i$ for $i = 1, \ldots, k$. In 1986, Cunningham~[SICOMP 1986] presented a matroid partition algorithm that uses $O(n p^{3/2} + k n)$ independence oracle queries, which was the previously known best algorithm. This query complexity is $O(n^{5/2})$ when $k \leq n$. <br />
+                In the matroid partitioning problem, we are given $k$ matroids $\mathcal{M}_1 = (V, \mathcal{I}_1), \dots , \mathcal{M}_k = (V, \mathcal{I}_k)$ defined over a common ground set $V$ of $n$ elements, and we need to find a partitionable set $S \subseteq V$ of largest possible cardinality, denoted by $p$. Here, a set $S \subseteq V$ is called partitionable  if there exists a partition $(S_1, \dots , S_k)$ of $S$ with $S_i \in \mathcal{I}_i$ for $i = 1, \ldots, k$. In 1986, Cunningham [SICOMP 1986] presented a matroid partition algorithm that uses $O(n p^{3/2} + k n)$ independence oracle queries, which was the previously known best algorithm. This query complexity is $O(n^{5/2})$ when $k \leq n$. <br />
 
-                Our main result is to present a matroid partition algorithm that uses $\tilde{O}(k'^{1/3} n p + k n)$ independence oracle queries, where $k' = \min\{k, p\}$. This query complexity is $\tilde{O}(n^{7/3})$ when $k \leq n$, which improves upon that of Cunningham's algorithm. To obtain our algorithm, we present a new approach <i>edge recycling augmentation</i>, which can be attained through new ideas: an efficient utilization of the binary search technique by Nguy$\tilde{{\hat{\text{e}}}}$n~[2019] and Chakrabarty-Lee-Sidford-Singla-Wong~[FOCS 2019] and a careful analysis of the independence oracle query complexity. Our analysis differs significantly from the one for matroid intersection algorithms, because of the parameter $k$. We also present a matroid partition algorithm that uses $\tilde{O}((n + k) \sqrt{p})$ rank oracle queries.
+                Our main result is to present a matroid partition algorithm that uses $\tilde{O}(k'^{1/3} n p + k n)$ independence oracle queries, where $k' = \min\{k, p\}$. This query complexity is $\tilde{O}(n^{7/3})$ when $k \leq n$, which improves upon that of Cunningham's algorithm. To obtain our algorithm, we present a new approach <i>edge recycling augmentation</i>, which can be attained through new ideas: an efficient utilization of the binary search technique by Nguyen [2019] and Chakrabarty-Lee-Sidford-Singla-Wong [FOCS 2019] and a careful analysis of the independence oracle query complexity. Our analysis differs significantly from the one for matroid intersection algorithms, because of the parameter $k$. We also present a matroid partition algorithm that uses $\tilde{O}((n + k) \sqrt{p})$ rank oracle queries.
             </div>
         </span>
         </div>
     </li>
 
     <li>
-        <strong>One-Face Shortest Disjoint Paths with a Deviation Terminal</strong> [<a href="https://drops.dagstuhl.de/opus/volltexte/2022/17332/pdf/LIPIcs-ISAAC-2022-47.pdf">proceeding</a>, <a href="eslide/2022.12.20.ISAAC.pdf">slides@ISAAC</a>]<br />
+        <strong>One-Face Shortest Disjoint Paths with a Deviation Terminal</strong> <a href="https://drops.dagstuhl.de/opus/volltexte/2022/17332/pdf/LIPIcs-ISAAC-2022-47.pdf" class="paper-button">proceeding</a> <a href="eslide/2022.12.20.ISAAC.pdf" class="slides-button">slides@ISAAC</a><br />
         <a href="https://www.kurims.kyoto-u.ac.jp/~yusuke/eindex.html">Yusuke Kobayashi</a>, Tatsuya Terao <br />
         Proceedings of the 33rd International Symposium on Algorithms and Computation (<strong>ISAAC 2022</strong>) <br />
         <div class="openbox">
@@ -187,7 +187,7 @@ I have a interest in the design and analysis of algorithms in theoretical comput
 <h5>Manuscripts</h5>
 <ol reversed>
     <li>
-        <strong>Deterministic $(2/3 - \varepsilon)$-Approximation of Matroid Intersection Using Nearly-Linear Independence-Oracle Queries</strong> [<a href="https://arxiv.org/abs/2410.18820">arXiv</a>]<br />
+        <strong>Deterministic $(2/3 - \varepsilon)$-Approximation of Matroid Intersection Using Nearly-Linear Independence-Oracle Queries</strong> <a href="https://arxiv.org/abs/2410.18820" class="paper-button">arXiv</a><br />
         Tatsuya Terao <br />
         <div class="openbox">
             <label for="deterministic2024"><i class="bi bi-chevron-expand"></i> Abstract</label>

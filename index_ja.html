@@ -167,16 +167,16 @@ MathJax = {
 <section id="papers">
 <h4><i class="bi bi-file-earmark-check"></i> 論文</h4>
 <div class="naiyou">
-<p>著者順は基本的にアルファベット順。(但し、&dagger;がついているものを除く。)</p>
-<p><a href="comment.html"><font size="4">[各論文を書いた経緯についてのコメント]</font></a></p>
+<p><a href="comment.html"><font size="4">各論文を書いた経緯についてのコメントはこちら．</font></a></p>
+<p>著者順は基本的にアルファベット順．(但し、&dagger;がついているものを除く．)</p>
 
 <section id="review">
 <h5>査読付き論文</h5>
 
-<ul>
+<ol reversed>
     <li>
-        <strong>Parameterized Quantum Query Algorithms for Graph Problems</strong> &dagger; [<a href="https://arxiv.org/abs/2408.03864">arXiv</a>, <a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol308-esa2024/LIPIcs.ESA.2024.99/LIPIcs.ESA.2024.99.pdf">proceeding</a>, <a href="eslide/2024.09.04.ESA.pdf">slides@ESA</a>] <br />
-        Tatsuya Terao, <a href="https://q.c.titech.ac.jp/mori/">Ryuhei Mori</a> <br />
+        <strong>Parameterized Quantum Query Algorithms for Graph Problems</strong> &dagger; <a href="https://arxiv.org/abs/2408.03864" class="paper-button">arXiv</a> <a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol308-esa2024/LIPIcs.ESA.2024.99/LIPIcs.ESA.2024.99.pdf" class="paper-button">proceeding</a> <a href="eslide/2024.09.04.ESA.pdf" class="slides-button">slides@ESA</a> <br />
+        Tatsuya Terao, <a href="https://mori-lab.github.io/mori/">Ryuhei Mori</a> <br />
         Proceedings of the 32nd Annual European Symposium on Algorithms (<strong>ESA 2024</strong>) <br />
         <div class="openbox">
         <label for="esa2024"><i class="bi bi-chevron-expand"></i> Abstract</label>
@@ -199,7 +199,7 @@ MathJax = {
         </div>
     </li>
     <li>
-        <strong>Subquadratic Submodular Maximization with a General Matroid Constraint</strong> [<a href="https://arxiv.org/abs/2405.00359">arXiv</a>, <a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol297-icalp2024/LIPIcs.ICALP.2024.100/LIPIcs.ICALP.2024.100.pdf">proceeding</a>, <a href="eslide/2024.07.09.ICALP.pdf">slides@ICALP</a>]<br />
+        <strong>Subquadratic Submodular Maximization with a General Matroid Constraint</strong> <a href="https://arxiv.org/abs/2405.00359" class="paper-button">arXiv</a> <a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol297-icalp2024/LIPIcs.ICALP.2024.100/LIPIcs.ICALP.2024.100.pdf" class="paper-button">proceeding</a> <a href="eslide/2024.07.09.ICALP.pdf" class="slides-button">slides@ICALP</a><br />
         <a href="https://www.kurims.kyoto-u.ac.jp/~yusuke/eindex.html">Yusuke Kobayashi</a>, Tatsuya Terao <br />
         Proceedings of the 51st EATCS International Colloquium on Automata, Languages and Programming (<strong>ICALP 2024</strong>) <br />
         <div class="openbox">
@@ -215,7 +215,7 @@ MathJax = {
         </div>
     </li>
     <li>
-        <strong>Faster Matroid Partition Algorithms</strong> [<a href="https://dl.acm.org/doi/10.1145/3707208">journal</a>, <a href="https://arxiv.org/abs/2303.05920">arXiv</a>, <a href="https://drops.dagstuhl.de/opus/volltexte/2023/18156/pdf/LIPIcs-ICALP-2023-104.pdf">proceeding</a>, <a href="eslide/2023.07.14.ICALP.pdf">slides@ICALP</a>, <a href="jslide/2023.08.28.poster.pdf">poster(ja)</a>]<br />
+        <strong>Faster Matroid Partition Algorithms</strong> <a href="https://dl.acm.org/doi/10.1145/3707208" class="paper-button">journal</a> <a href="https://arxiv.org/abs/2303.05920" class="paper-button">arXiv</a> <a href="https://drops.dagstuhl.de/opus/volltexte/2023/18156/pdf/LIPIcs-ICALP-2023-104.pdf" class="paper-button">proceeding</a> <a href="eslide/2023.07.14.ICALP.pdf" class="slides-button">slides@ICALP</a> <a href="jslide/2023.08.28.poster.pdf" class="slides-button">poster(ja)</a><br />
         Tatsuya Terao <br />
         ACM Transactions on Algorithms (<strong>TALG</strong>), 2025 <br />
         A preliminary version appeared in Proceedings of the 50th EATCS International Colloquium on Automata, Languages and Programming (<strong>ICALP 2023</strong>) <br />
@@ -224,15 +224,15 @@ MathJax = {
         <input id="icalp2023" class="inputcss" type="checkbox" />
         <span class="boxshow">
             <div class="box6">
-                In the matroid partitioning problem, we are given $k$ matroids $\mathcal{M}_1 = (V, \mathcal{I}_1), \dots , \mathcal{M}_k = (V, \mathcal{I}_k)$ defined over a common ground set $V$ of $n$ elements, and we need to find a partitionable set $S \subseteq V$ of largest possible cardinality, denoted by $p$. Here, a set $S \subseteq V$ is called partitionable  if there exists a partition $(S_1, \dots , S_k)$ of $S$ with $S_i \in \mathcal{I}_i$ for $i = 1, \ldots, k$. In 1986, Cunningham~[SICOMP 1986] presented a matroid partition algorithm that uses $O(n p^{3/2} + k n)$ independence oracle queries, which was the previously known best algorithm. This query complexity is $O(n^{5/2})$ when $k \leq n$. <br />
+                In the matroid partitioning problem, we are given $k$ matroids $\mathcal{M}_1 = (V, \mathcal{I}_1), \dots , \mathcal{M}_k = (V, \mathcal{I}_k)$ defined over a common ground set $V$ of $n$ elements, and we need to find a partitionable set $S \subseteq V$ of largest possible cardinality, denoted by $p$. Here, a set $S \subseteq V$ is called partitionable  if there exists a partition $(S_1, \dots , S_k)$ of $S$ with $S_i \in \mathcal{I}_i$ for $i = 1, \ldots, k$. In 1986, Cunningham [SICOMP 1986] presented a matroid partition algorithm that uses $O(n p^{3/2} + k n)$ independence oracle queries, which was the previously known best algorithm. This query complexity is $O(n^{5/2})$ when $k \leq n$. <br />
 
-                Our main result is to present a matroid partition algorithm that uses $\tilde{O}(k'^{1/3} n p + k n)$ independence oracle queries, where $k' = \min\{k, p\}$. This query complexity is $\tilde{O}(n^{7/3})$ when $k \leq n$, which improves upon that of Cunningham's algorithm. To obtain our algorithm, we present a new approach <i>edge recycling augmentation</i>, which can be attained through new ideas: an efficient utilization of the binary search technique by Nguy$\tilde{{\hat{\text{e}}}}$n~[2019] and Chakrabarty-Lee-Sidford-Singla-Wong~[FOCS 2019] and a careful analysis of the independence oracle query complexity. Our analysis differs significantly from the one for matroid intersection algorithms, because of the parameter $k$. We also present a matroid partition algorithm that uses $\tilde{O}((n + k) \sqrt{p})$ rank oracle queries.
+                Our main result is to present a matroid partition algorithm that uses $\tilde{O}(k'^{1/3} n p + k n)$ independence oracle queries, where $k' = \min\{k, p\}$. This query complexity is $\tilde{O}(n^{7/3})$ when $k \leq n$, which improves upon that of Cunningham's algorithm. To obtain our algorithm, we present a new approach <i>edge recycling augmentation</i>, which can be attained through new ideas: an efficient utilization of the binary search technique by Nguyen [2019] and Chakrabarty-Lee-Sidford-Singla-Wong [FOCS 2019] and a careful analysis of the independence oracle query complexity. Our analysis differs significantly from the one for matroid intersection algorithms, because of the parameter $k$. We also present a matroid partition algorithm that uses $\tilde{O}((n + k) \sqrt{p})$ rank oracle queries.
             </div>
         </span>
         </div>
     </li>
     <li>
-        <strong>One-Face Shortest Disjoint Paths with a Deviation Terminal</strong> [<a href="https://drops.dagstuhl.de/opus/volltexte/2022/17332/pdf/LIPIcs-ISAAC-2022-47.pdf">proceeding</a>, <a href="eslide/2022.12.20.ISAAC.pdf">slides@ISAAC</a>, <a href="jslide/2023.10.23.poster.pdf">poster(ja)</a>]<br />
+        <strong>One-Face Shortest Disjoint Paths with a Deviation Terminal</strong> <a href="https://drops.dagstuhl.de/opus/volltexte/2022/17332/pdf/LIPIcs-ISAAC-2022-47.pdf" class="paper-button">proceeding</a> <a href="eslide/2022.12.20.ISAAC.pdf" class="slides-button">slides@ISAAC</a> <a href="jslide/2023.10.23.poster.pdf" class="slides-button">poster(ja)</a> <br />
         <a href="https://www.kurims.kyoto-u.ac.jp/~yusuke/eindex.html">Yusuke Kobayashi</a>, Tatsuya Terao <br />
         Proceedings of the 33rd International Symposium on Algorithms and Computation (<strong>ISAAC 2022</strong>) <br />
         <div class="openbox">
@@ -255,14 +255,14 @@ MathJax = {
             </span>
             </div>
     </li>
-</ul>
+</ol>
 </section>
 
 <section id="manuscript">
 <h5>プレプリント</h5>
-<ul>
+<ol reversed>
     <li>
-        <strong>Deterministic $(2/3 - \varepsilon)$-Approximation of Matroid Intersection Using Nearly-Linear Independence-Oracle Queries</strong> [<a href="https://arxiv.org/abs/2410.18820">arXiv</a>]<br />
+        <strong>Deterministic $(2/3 - \varepsilon)$-Approximation of Matroid Intersection Using Nearly-Linear Independence-Oracle Queries</strong> <a href="https://arxiv.org/abs/2410.18820" class="paper-button">arXiv</a><br />
         Tatsuya Terao <br />
         <div class="openbox">
             <label for="deterministic2024"><i class="bi bi-chevron-expand"></i> Abstract</label>
@@ -274,7 +274,7 @@ MathJax = {
             </span>
             </div>
     </li>
-</ul>
+</ol>
 </section>
 </div>
 </section>
@@ -287,20 +287,29 @@ MathJax = {
 
 <ul>
     <li>
-        <u>Tatsuya Terao</u>, Ryuhei Mori: <strong>Parameterized Quantum Query Algorithms for Graph Problems</strong>, 
-        The 32nd Annual European Symposium on Algorithms (<strong>ESA 2024</strong>), Egham, United Kingdom, Sep 4, 2024. [<a href="eslide/2024.09.04.ESA.pdf">slides</a>]
+        <u>Tatsuya Terao</u>, Ryuhei Mori: <strong>Parameterized Quantum Query Algorithms for Graph Problems</strong>
+        <ul class="presentations">
+            <li> The 32nd Annual European Symposium on Algorithms (<strong>ESA 2024</strong>), Egham, United Kingdom, Sep 4, 2024. <a href="eslide/2024.09.04.ESA.pdf" class="slides-button">slides</a>
+        </ul>
     </li>
     <li>
-        Yusuke Kobayashi, <u>Tatsuya Terao</u>: <strong>Subquadratic Submodular Maximization with a General Matroid Constraint</strong>, 
-        The 51st EATCS International Colloquium on Automata, Languages and Programming (<strong>ICALP 2024</strong>), Tallinn, Estonia, July 9, 2024. [<a href="eslide/2024.07.09.ICALP.pdf">slides</a>]
+        Yusuke Kobayashi, <u>Tatsuya Terao</u>: <strong>Subquadratic Submodular Maximization with a General Matroid Constraint</strong>
+        <ul class="presentations">
+            <li> The 51st EATCS International Colloquium on Automata, Languages and Programming (<strong>ICALP 2024</strong>), Tallinn, Estonia, July 9, 2024. <a href="eslide/2024.07.09.ICALP.pdf" class="slides-button">slides</a>
+        </ul>
     </li>
     <li>
-        <u>Tatsuya Terao</u>: <strong>Faster Matroid Partition Algorithms</strong>, 
-        The 50th EATCS International Colloquium on Automata, Languages and Programming (<strong>ICALP 2023</strong>), Paderborn, Germany, July 14, 2023. [<a href="eslide/2023.07.14.ICALP.pdf">slides</a>]
+        <u>Tatsuya Terao</u>: <strong>Faster Matroid Partition Algorithms</strong>
+        <ul class="presentations">
+            <li> The 13th Hungarian-Japanese Symposium on Discrete Mathematics and Its Applications, Tokyo, Japan, May 2025.
+            <li> The 50th EATCS International Colloquium on Automata, Languages and Programming (<strong>ICALP 2023</strong>), Paderborn, Germany, July 14, 2023. <a href="eslide/2023.07.14.ICALP.pdf" class="slides-button">slides</a>
+        </ul>
     </li>
     <li>
-        Yusuke Kobayashi, <u>Tatsuya Terao</u>: <strong>One-Face Shortest Disjoint Paths with a Deviation Terminal</strong>, 
-        The 33rd International Symposium on Algorithms and Computation (<strong>ISAAC 2022</strong>), Seoul, Korea, Dec 20, 2022. [<a href="eslide/2022.12.20.ISAAC.pdf">slides</a>]
+        Yusuke Kobayashi, <u>Tatsuya Terao</u>: <strong>One-Face Shortest Disjoint Paths with a Deviation Terminal</strong>
+        <ul class="presentations">
+            <li> The 33rd International Symposium on Algorithms and Computation (<strong>ISAAC 2022</strong>), Seoul, Korea, Dec 20, 2022. <a href="eslide/2022.12.20.ISAAC.pdf" class="slides-button">slides</a>
+        </ul>
     </li>
 </ul>
 </section>
@@ -309,14 +318,35 @@ MathJax = {
 <h5>国内学会発表</h5>
 
 <ul>
-    <li><u>寺尾樹哉</u>, 森立平 「<strong>グラフの問題に対するパラメータ化量子クエリ計算量</strong>」第51回量子情報技術研究会 (QIT51), 2024年11月27日, サンポートホール高松. [<a href="jslide/2024.11.27.QIT.pdf">slides</a>]</li>
-    <li><u>寺尾樹哉</u>, 小林佑輔 「<strong>マトロイド制約下での劣モジュラ関数最大化に対する高速なアルゴリズム</strong>」日本応用数理学会 2024年度年会 離散システム研究部会, 2024年9月16日, 京都大学. [<a href="jslide/2024.09.16.JSIAM.pdf">slides</a>] </li>
-    <li><u>寺尾樹哉</u>, 小林佑輔 「<strong>マトロイド制約下での劣モジュラ関数最大化に対する高速なアルゴリズム</strong>」最適化の理論とアルゴリズム:未来を担う若手研究者の集い 2024, 2024年5月19日, 筑波大学. [<a href="jslide/2024.05.19.RAOTA.pdf">slides</a>]</li>
-    <li><u>寺尾樹哉</u>, 森立平 「<strong>頂点被覆とマッチングに対する最適なパラメータ化量子クエリ計算量</strong>」2023年度冬のLAシンポジウム, 2024年2月20日, 京都大学. [<a href="jslide/2024.02.20.LA.pdf">slides</a>]</li>
-    <li><u>寺尾樹哉</u> 「<strong>マトロイド分割問題に対する高速なアルゴリズム</strong>」離散数学とその応用研究集会2023 (JCCA 2023), 2023年8月30日, 愛知教育大学. [<a href="jslide/2023.08.30.JCCA.pdf">slides</a>]</li>
-    <li><u>寺尾樹哉</u> 「<strong>マトロイド分割問題に対する高速なアルゴリズム</strong>」最適化の理論とアルゴリズム:未来を担う若手研究者の集い 2023, 2023年5月20日, 筑波大学. [<a href="jslide/2023.05.20.RAOTA.pdf">slides</a>]</li>
-    <li><u>寺尾樹哉</u>, 小林佑輔 「<strong>除外ターミナルを含む同一面最短点素パス問題に対するアルゴリズム</strong>」日本応用数理学会第19回研究部会連合発表会, 離散システム研究部会, 2023年3月9日, 岡山理科大学. [<a href="jslide/2023.03.09.JSIAM.pdf">slides</a>]</li>
-    <li><u>寺尾樹哉</u>, 小林佑輔 「<strong>除外ターミナルを含む同一面最短点素パス問題に対するアルゴリズム</strong>」2022年度OR学会関西支部, 若手研究発表会, 2022年10月29日, 大阪大学. [<a href="jslide/2022.10.29.OR.pdf">slides</a>]</li>
+    <li><u>寺尾樹哉</u>: 「<strong>準線形回の独立性オラクルへのクエリを使用するマトロイド交叉問題の決定的な$(2/3-\varepsilon)$-近似アルゴリズム</strong>」
+        <ul class="presentations">
+            <li> 最適化の理論とアルゴリズム:未来を担う若手研究者の集い 2025, 2025年5月, 筑波大学. 
+        </ul>
+    </li>
+    <li><u>寺尾樹哉</u>, 森立平: 「<strong>グラフの問題に対するパラメータ化量子クエリ計算量</strong>」
+        <ul class="presentations">
+            <li> 第51回量子情報技術研究会 (QIT51), 2024年11月27日, サンポートホール高松. <a href="jslide/2024.11.27.QIT.pdf" class="slides-button">slides</a>
+            <li> 2023年度冬のLAシンポジウム, 2024年2月20日, 京都大学.  <font size="2">(発表時のタイトルは「頂点被覆とマッチングに対する最適なパラメータ化量子クエリ計算量」)</font>  <a href="jslide/2024.02.20.LA.pdf" class="slides-button">slides</a>
+        </ul>
+    </li>
+    <li><u>寺尾樹哉</u>, 小林佑輔: 「<strong>マトロイド制約下での劣モジュラ関数最大化に対する高速なアルゴリズム</strong>」
+        <ul class="presentations">
+            <li> 日本応用数理学会 2024年度年会 離散システム研究部会, 2024年9月16日, 京都大学. <a href="jslide/2024.09.16.JSIAM.pdf" class="slides-button">slides</a>
+            <li> 最適化の理論とアルゴリズム:未来を担う若手研究者の集い 2024, 2024年5月19日, 筑波大学. <a href="jslide/2024.05.19.RAOTA.pdf" class="slides-button">slides</a>
+        </ul>
+    </li>
+    <li><u>寺尾樹哉</u>: 「<strong>マトロイド分割問題に対する高速なアルゴリズム</strong>」
+        <ul class="presentations">
+            <li> 離散数学とその応用研究集会2023 (JCCA 2023), 2023年8月30日, 愛知教育大学. <a href="jslide/2023.08.30.JCCA.pdf" class="slides-button">slides</a>
+            <li> 最適化の理論とアルゴリズム:未来を担う若手研究者の集い 2023, 2023年5月20日, 筑波大学. <a href="jslide/2023.05.20.RAOTA.pdf" class="slides-button">slides</a>
+        </ul>
+    </li>
+    <li><u>寺尾樹哉</u>, 小林佑輔: 「<strong>除外ターミナルを含む同一面最短点素パス問題に対するアルゴリズム</strong>」
+        <ul class="presentations">
+            <li> 日本応用数理学会第19回研究部会連合発表会, 離散システム研究部会, 2023年3月9日, 岡山理科大学. <a href="jslide/2023.03.09.JSIAM.pdf" class="slides-button">slides</a>
+            <li> 2022年度OR学会関西支部, 若手研究発表会, 2022年10月29日, 大阪大学. <a href="jslide/2022.10.29.OR.pdf" class="slides-button">slides</a>
+        </ul>
+    </li>
 </ul>
 </section>
 </div>
@@ -326,10 +356,10 @@ MathJax = {
 <h4><i class="bi bi-award"></i> 受賞</h4>
 <div class="naiyou">
 <ul>
-    <li>OR学会 第42回学生論文賞, 2024年9月10日. [<a href="https://orsj.org/?page_id=1125">リンク</a>]</li>
-    <li>最適化の理論とアルゴリズム:未来を担う若手研究者の集い 2024, 優秀発表賞, 2024年5月19日. [<a href="https://orsj.org/raota/#tsukuba24">リンク</a>]</li>
-    <li>最適化の理論とアルゴリズム:未来を担う若手研究者の集い 2023, 優秀発表賞, 2023年5月21日. [<a href="https://orsj.org/raota/#tsukuba23">リンク</a>]</li>
-    <li>OR学会関西支部 若手研究発表会, 優秀発表賞, 2022年10月29日. [<a href="https://orsj.org/kansai/2022/11/14/%E6%97%A5%E6%9C%ACor%E5%AD%A6%E4%BC%9A-%E9%96%A2%E8%A5%BF%E6%94%AF%E9%83%A8-2022-%E5%B9%B4%E5%BA%A6%E8%8B%A5%E6%89%8B%E7%A0%94%E7%A9%B6%E7%99%BA%E8%A1%A8%E4%BC%9A-%E5%84%AA%E7%A7%80%E7%99%BA%E8%A1%A8/">リンク</a>]</li>
+    <li>OR学会 第42回学生論文賞, 2024年9月10日. <a href="https://orsj.org/?page_id=1125" class="link-button">link</a></li>
+    <li>最適化の理論とアルゴリズム:未来を担う若手研究者の集い 2024, 優秀発表賞, 2024年5月19日. <a href="https://orsj.org/raota/#tsukuba24" class="link-button">link</a></li>
+    <li>最適化の理論とアルゴリズム:未来を担う若手研究者の集い 2023, 優秀発表賞, 2023年5月21日. <a href="https://orsj.org/raota/#tsukuba23" class="link-button">link</a></li>
+    <li>OR学会関西支部 若手研究発表会, 優秀発表賞, 2022年10月29日. <a href="https://orsj.org/kansai/2022/11/14/%E6%97%A5%E6%9C%ACor%E5%AD%A6%E4%BC%9A-%E9%96%A2%E8%A5%BF%E6%94%AF%E9%83%A8-2022-%E5%B9%B4%E5%BA%A6%E8%8B%A5%E6%89%8B%E7%A0%94%E7%A9%B6%E7%99%BA%E8%A1%A8%E4%BC%9A-%E5%84%AA%E7%A7%80%E7%99%BA%E8%A1%A8/" class="link-button">link</a></li>
 </ul>
 </div>
 </section>
@@ -353,7 +383,7 @@ MathJax = {
 
 <footer>
     <p style="text-align: right">
-        <font size="3.5">最終更新日: 2025年4月1日</font>
+        <font size="3.5">最終更新日: 2025年4月12日</font>
     </p>
 </footer>
 
