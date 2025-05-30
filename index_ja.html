@@ -114,7 +114,7 @@ MathJax = {
 
             for (const img of images) {
                 cumulative += img.probability;
-                if (rand < cumulative) {
+                if (rand <= cumulative) {
                     return img.src;
                 }
             }
@@ -366,6 +366,7 @@ MathJax = {
 <h4><i class="bi bi-award"></i> 受賞</h4>
 <div class="naiyou">
 <ul>
+    <!-- <li>日本応用数理学会 2024年度年会 若手優秀講演賞, 2025年6月27日. -->
     <li>OR学会 第42回学生論文賞, 2024年9月10日. <a href="https://orsj.org/?page_id=1125" class="link-button">link</a></li>
     <li>最適化の理論とアルゴリズム:未来を担う若手研究者の集い 2024, 優秀発表賞, 2024年5月19日. <a href="https://orsj.org/raota/#tsukuba24" class="link-button">link</a></li>
     <li>最適化の理論とアルゴリズム:未来を担う若手研究者の集い 2023, 優秀発表賞, 2023年5月21日. <a href="https://orsj.org/raota/#tsukuba23" class="link-button">link</a></li>
