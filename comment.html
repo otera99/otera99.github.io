@@ -45,35 +45,37 @@ MathJax = {
 
 <body style='font-family: "Comic Sans MS", "Mamelon"' class="comment">
 
-<h3><strong>論文のコメント</strong>
-</h3>
+<!-- <h3 style="text-align: center;"><strong>論文のコメント</strong>
+</h3> -->
 
 <div class="naiyou">
 
 <p>執筆した論文で，やろうと思ったきっかけや，アイデアを思いついた背景などで面白いものがあれば，コメントとして残しておきたいと思います．</p>
 
 
-<ul>
-    <!-- <li>
+<ul class="horizontal-list">
+    <li>
         <div class="color-box">
         <strong>Deterministic $(2/3 - \varepsilon)$-Approximation of Matroid Intersection using Nearly-Linear Independence-Oracle Queries</strong> <br />
         Tatsuya Terao <br />
         </div>
-        <p>Coming soon.</p>
-    </li> -->
+        <p>マトロイド交叉問題のrandom-orderでのstreamingアルゴリズムの論文<a href="https://arxiv.org/abs/2310.16827">[Huang-Sellier'24]</a>を読んで，自分もマトロイド交叉問題に関するstreamingアルゴリズムについて何かできないかと考え始めた．マッチングに対する最も初期のsemi-streamingアルゴリズムの論文<a href="https://www.sciencedirect.com/science/article/pii/S0304397505005323">[FKMSZ'05]</a>を読んでる際に，マッチングだと，長さ3のaugmenting pathをほとんど見つけ切れば，$(2/3-\varepsilon)-$近似が達成でき，これは簡単にstreamingで実装できることを知った．その時，最近のマトロイド交叉問題に対するaugmenting setsを使った$(1-
+        \varepsilon)-$近似アルゴリズム[Blikstad'21]を途中で($1/\varepsilon$ round)止めるだけで，同様に，$(2/3-\varepsilon)-$近似が達成できることに気が付く．また，これは，streamingだけではなく，offlineの設定でも，ほぼ線形回の独立性オラクルへのクエリで$(2/3-\varepsilon)-$近似が達成できているという面白い結果を意味していることに気がついた．
+        </p>
+    </li>
     <li>
         <div class="color-box">
         <strong>Parameterized Quantum Query Algorithms for Graph Problems</strong>  <br />
         Tatsuya Terao, Ryuhei Mori <br />
         </div>
-        <p>まず最初に，$k$-vertex coverに対するほとんど知られていない$O(3^k n)$時間のアルゴリズム(<a href="https://www.sciencedirect.com/science/article/pii/S0022000096900586">[Papadimitriou-Yannakakis '96]</a>が発見した極大マッチングを使ったアルゴリズム)から着想を得て，$k$-vertex coverが$O(kn)$量子クエリで(隣接行列モデルの設定で)解けることに気が付いた．ただ，下界を考えると$O(\sqrt{k} n)$クエリとなりギャップがあった．その後，夜道を歩いている時に，FPTの教科書でみたkernelizationのreduction ruleを極大マッチングの端点のみに適用するというアイデアを思いつく．これで，$k$が小さい時には上界と下界を一致させることができた．この半年後くらいに，量子クエリの設定と分散計算の設定って近いんだよなと思い，$k$-vertex coverのアイデアを分散計算にも適用できないかなと思いつく．ちょっと調べると，<a href="https://arxiv.org/abs/1807.04900">実は近いことはやられている</a>ことがわかった．そして，その分散の$k$-matchingのアルゴリズムをベースに，$k$-matchingに対する量子クエリアルゴリズムを設計した．それでこの二つを組合せて論文化した．(なお，最初に投稿したバージョンでは，$k$-matchingの量子アルゴリズムの方に誤りがあった．RIMS内部のゼミで発表した時に指摘されたが，小林先生の協力もあり，なんとか修正できた，)</p>
+        <p>まず最初に，$k$-vertex coverに対するほとんど知られていない$O(3^k n)$時間のアルゴリズム(<a href="https://www.sciencedirect.com/science/article/pii/S0022000096900586">[Papadimitriou-Yannakakis'96]</a>が発見した極大マッチングを使ったアルゴリズム)から着想を得て，$k$-vertex coverが$O(kn)$量子クエリで(隣接行列モデルの設定で)解けることに気が付いた．ただ，下界を考えると$O(\sqrt{k} n)$クエリとなりギャップがあった．その後，夜道を歩いている時に，FPTの教科書でみたkernelizationのreduction ruleを極大マッチングの端点のみに適用するというアイデアを思いつく．これで，$k$が小さい時には上界と下界を一致させることができた．この半年後くらいに，量子クエリの設定と分散計算の設定って近いんだよなと思い，$k$-vertex coverのアイデアを分散計算にも適用できないかなと思いつく．ちょっと調べると，<a href="https://arxiv.org/abs/1807.04900">実は近いことはやられている</a>ことがわかった．そして，その分散の$k$-matchingのアルゴリズムをベースに，$k$-matchingに対する量子クエリアルゴリズムを設計した．それでこの二つを組合せて論文化した．(なお，最初に投稿したバージョンでは，$k$-matchingの量子アルゴリズムの方に誤りがあった．RIMS内部のゼミで発表した時に指摘されたが，小林先生の協力もあり，なんとか修正できた，)</p>
     </li>
     <li>
         <div class="color-box">
         <strong>Subquadratic Submodular Maximization with a General Matroid Constraint</strong> <br />
         Yusuke Kobayashi, Tatsuya Terao <br />
         </div>
-        <p>ICALP'23で自分の発表のちょうど次の発表が，特殊なマトロイド制約の劣モジュラ関数最大化問題を高速化するという<a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2023.74">論文</a>についてだった．それを聞いた際に，一般のマトロイドでオラクルの設定で，(最近のマトロイド交叉の高速化に使われている)二分探索のテクニックを使って高速化できないだろうかと思った．その後，(マトロイド制約での劣モジュラ最大化のアルゴリズムの肝となる) swap roundingの論文についてゼミで小林先生と話している時に，小林先生が(マトロイド交叉のアルゴリズムに用いる)交換可能グラフのような補助グラフの中で有向サイクルを高速に見つけることができれば，丸めアルゴリズムが高速化できてことに気が付いた．その週末に，<a href="https://lealgorithm.blogspot.com/2021/10/15.html">清水先生のブログに載っているアルゴリズム</a>のことをふと思い出し，そこから着想を得て，$\tilde{O}(\sqrt{r})$個の頂点をグラフからサンプルするアルゴリズムを思いついた．後の<a href="https://ieeexplore.ieee.org/abstract/document/10756170?casa_token=UF0FXotrM7IAAAAA:YGLO2kpagK6Jspj91jfBsFHz_e5QH_h3OcOdpSMBW7_N2J8LN1dgunY7Gtyj7Lr6u4kkA_HdmZo">論文</a>で計算量は抜かれたが，そのあとに出た現状最速の<a href="https://arxiv.org/abs/2409.14325">論文</a>では我々のアルゴリズムを使用している．(連続最適化の部分が高速化された．)
+        <p>ICALP'23で自分の発表のちょうど次の発表が，特殊なマトロイド制約の劣モジュラ関数最大化問題を高速化するという<a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2023.74">論文</a>についてだった．それを聞いた際に，一般のマトロイドでオラクルの設定で，(最近のマトロイド交叉の高速化に使われている)二分探索のテクニックを使って高速化できないだろうかと思った．その後，(マトロイド制約での劣モジュラ最大化のアルゴリズムの肝となる) swap roundingの論文についてゼミで小林先生と話している時に，小林先生が(マトロイド交叉のアルゴリズムに用いる)交換可能グラフのような補助グラフの中で有向サイクルを高速に見つけることができれば，丸めアルゴリズムが高速化できてことに気が付いた．その週末，<a href="https://lealgorithm.blogspot.com/2021/10/15.html">清水先生のブログに載っているアルゴリズム</a>のことをふと思い出し，そこから着想を得て，$\tilde{O}(\sqrt{r})$個の頂点をグラフからサンプルすることで，高速なアルゴリズムを設計できることを思いついた．後の<a href="https://ieeexplore.ieee.org/abstract/document/10756170?casa_token=UF0FXotrM7IAAAAA:YGLO2kpagK6Jspj91jfBsFHz_e5QH_h3OcOdpSMBW7_N2J8LN1dgunY7Gtyj7Lr6u4kkA_HdmZo">論文</a>で計算量は抜かれたが，そのあとに出た現状最速の<a href="https://arxiv.org/abs/2409.14325">論文</a>では我々のアルゴリズムを使用している．(連続最適化の部分が高速化された．)
         </p>
     </li>
     <li>
@@ -81,7 +83,7 @@ MathJax = {
         <strong>Faster Matroid Partition Algorithms</strong> <br />
         Tatsuya Terao <br />
         </div>
-        <p>(競プロ出身なので，)アルゴリズムの高速化をやりたいと思っていたので，興味があったマトロイド交叉の最近の高速化の読んでみることにした．それで何をしようかと思った時，マトロイド交叉の長らく最速だった<a href="https://epubs.siam.org/doi/abs/10.1137/0215066?casa_token=uclMCDW46mkAAAAA:bf9bDQcvzIV1qs2dKjE2KgaEWvbJb4PI_LryR45depKmBuOQ-kHCwgtStN8bDxkFG3afMFxVnsq7">Cunninghamの論文</a>が，マトロイド分割に対しても最速のアルゴリズムを提案していたので，マトロイド分割に対しても(最近のマトロイド交叉の高速化に使われている)二分探索のテクニックを使って高速化できないだろうかと思った．ちょっと考えると，非常に簡単に高速化できることが分かった．しかしながら，マトロイドの個数$k$が大きい時$(k = \Omega(n))$の時は，Cunninghamの論文よりも速いアルゴリズムを与えられていなかった．そこで，$k$が大きい時も高速化できないだろうかと考えることにする．考え始めてから1ヶ月ほどして，Cunninghamの論文で肝となっている補題(私の論文のarXiv版ではLemma 2.10)をうまく使うと，"平方分割"的なことができることに気が付く．このアイデアでかなり簡単に$k$が大きい場合でも改善できることが確認でき，その後，もう少し解析を精緻化させて論文化した． Korte--Vygenによる組合せ最適化の有名な教科書の最初の方に組合せ最適化の重要な問題として80問ほど載っている中の一つの問題に対して，最速のアルゴリズムを与えられたのは喜ばしい．</p>
+        <p>(競プロ出身なので，)アルゴリズムの高速化をやりたいと思っていたので，興味があったマトロイド交叉の最近の高速化の読んでみることにした．それで何をしようかと思った時，マトロイド交叉の長らく最速だった<a href="https://epubs.siam.org/doi/abs/10.1137/0215066?casa_token=uclMCDW46mkAAAAA:bf9bDQcvzIV1qs2dKjE2KgaEWvbJb4PI_LryR45depKmBuOQ-kHCwgtStN8bDxkFG3afMFxVnsq7">Cunninghamの論文</a>が，マトロイド分割に対しても最速のアルゴリズムを提案していたので，マトロイド分割に対しても(最近のマトロイド交叉の高速化に使われている)二分探索のテクニックを使って高速化できないだろうかと思った．ちょっと考えると，非常に簡単に高速化できることが分かった．しかしながら，マトロイドの個数$k$が大きい時$(k = \Omega(n))$の時は，Cunninghamの論文よりも速いアルゴリズムを与えられていなかった．そこで，$k$が大きい時も高速化できないだろうかと考えることにする．考え始めてから1ヶ月ほどして，Cunninghamの論文で肝となっている補題(私の論文のarXiv版ではLemma 2.10)をうまく使うと，"平方分割"的なことができることに気が付く．このアイデアでかなり簡単に$k$が大きい場合でも改善できることが確認でき，その後，もう少し解析を精緻化させて論文化した． Korte-Vygenによる組合せ最適化の有名な教科書に組合せ最適化の重要な問題として80問ほど載っている中の一つの問題に対して，最速のアルゴリズムを与えられたのは喜ばしい．</p>
     </li>
     <!-- <li>
         <div class="color-box">
