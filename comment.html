@@ -50,7 +50,7 @@ MathJax = {
 
 <div class="naiyou">
 
-<p>執筆した論文で，やろうと思ったきっかけや，アイデアを思いついた背景などで面白いものがあれば，コメントとして残しておきたいと思います．</p>
+<p>執筆した論文で，やろうと思ったきっかけや，アイデアを思いついた背景などで面白いものがあれば，コメントとして残しておきたいと思う．</p>
 
 
 <ul class="horizontal-list">
@@ -59,8 +59,8 @@ MathJax = {
         <strong>"Deterministic $(2/3 - \varepsilon)$-Approximation of Matroid Intersection using Nearly-Linear Independence-Oracle Queries"</strong> <br />
         Tatsuya Terao <br />
         </div>
-        <p>マトロイド交叉問題のrandom-orderでのstreamingアルゴリズムの論文<a href="https://arxiv.org/abs/2310.16827">[Huang-Sellier'24]</a>を読んで，自分もマトロイド交叉問題に関するstreamingアルゴリズムについて何かできないかと考え始めた．マッチングに対する最も初期のsemi-streamingアルゴリズムの論文<a href="https://www.sciencedirect.com/science/article/pii/S0304397505005323">[FKMSZ'05]</a>を読んでる際に，マッチングだと，長さ3のaugmenting pathをほとんど見つけ切れば，$(2/3-\varepsilon)$-近似が達成でき，これは簡単にstreamingで実装できることを知った．その時，最近のマトロイド交叉問題に対するaugmenting setsを使った$(1-
-        \varepsilon)$-近似アルゴリズム[Blikstad'21]を途中で($1/\varepsilon$ rounds)止めるだけで，同様に，$(2/3-\varepsilon)$-近似が達成できることに気が付いた．また，これは，streamingだけではなく，offlineの設定でも，ほぼ線形回の独立性オラクルへのクエリで$(2/3-\varepsilon)$-近似が達成できているという面白い結果を意味していることに気がついた．
+        <p>マトロイド交叉問題のrandom-orderでのstreamingアルゴリズムの論文 <a href="https://arxiv.org/abs/2310.16827">[Huang-Sellier'24]</a>を読んで，自分もマトロイド交叉問題に関するstreamingアルゴリズムについて何かできないかと考え始めた．マッチングに対する最も初期のsemi-streamingアルゴリズムの論文 <a href="https://www.sciencedirect.com/science/article/pii/S0304397505005323">[FKMSZ'05]</a>を読んでる際に，マッチングだと，長さ3のaugmenting pathをほとんど見つけ切れば，$(2/3-\varepsilon)$-近似が達成でき，これは簡単にstreamingで実装できることを知った．その後，同様のアイデアで，最近のマトロイド交叉問題に対するaugmenting setsを使った$(1-
+        \varepsilon)$-近似アルゴリズム <a href="https://arxiv.org/abs/2105.05673">[Blikstad'21]</a>を途中($1/\varepsilon$ rounds)で止めるだけで，$(2/3-\varepsilon)$-近似が達成できることに気が付いた．また，これは，streamingだけではなく，offlineの設定でも，ほぼ線形回の独立性オラクルへのクエリで$(2/3-\varepsilon)$-近似が達成できているという面白い結果を意味していることに気がついた．
         </p>
     </li>
     <li>
@@ -68,7 +68,7 @@ MathJax = {
         <strong>"Parameterized Quantum Query Algorithms for Graph Problems"</strong>  <br />
         Tatsuya Terao, Ryuhei Mori <br />
         </div>
-        <p>まず最初に，$k$-vertex coverに対するほとんど知られていない$O(3^k n)$時間のアルゴリズム(<a href="https://www.sciencedirect.com/science/article/pii/S0022000096900586">[Papadimitriou-Yannakakis'96]</a>が発見した極大マッチングを使ったアルゴリズム)から着想を得て，$k$-vertex coverが$O(kn)$量子クエリで(隣接行列モデルの設定で)解けることに気が付いた．ただ，下界を考えると$O(\sqrt{k} n)$クエリとなりギャップがあった．その後，夜道を歩いている時に，FPTの教科書でみたkernelizationのreduction ruleを極大マッチングの端点のみに適用するというアイデアを思いつく．これで，$k$が小さい時には上界と下界を一致させることができた．この半年後くらいに，量子クエリの設定と分散計算の設定って近いんだよなと思い，$k$-vertex coverのアイデアを分散計算にも適用できないかなと思いつく．ちょっと調べると，<a href="https://arxiv.org/abs/1807.04900">実は近いことはやられている</a>ことがわかった．そして，その分散の$k$-matchingのアルゴリズムをベースに，$k$-matchingに対する量子クエリアルゴリズムを設計した．それでこの二つを組合せて論文化した．(なお，最初に投稿したバージョンでは，$k$-matchingの量子アルゴリズムの方に誤りがあった．RIMS内部のゼミで発表した時に指摘されたが，小林先生の協力もあり，なんとか修正できた，)</p>
+        <p>まず最初に，$k$-vertex coverに対するほとんど知られていない$O(3^k n)$時間のアルゴリズム(<a href="https://www.sciencedirect.com/science/article/pii/S0022000096900586">[Papadimitriou-Yannakakis'96]</a>が発見した極大マッチングを使ったアルゴリズム)から着想を得て，$k$-vertex coverが$O(kn)$量子クエリで(隣接行列モデルの設定で)解けることに気が付いた．ただ，下界を考えると$O(\sqrt{k} n)$クエリとなりギャップがあった．その後，夜道を歩いている時に，FPTの教科書でみたkernelizationのreduction ruleを極大マッチングの端点のみに適用するというアイデアを思いつく．これで，$k$が小さい時には上界と下界を一致させることができた．この半年後くらいに，量子クエリの設定と分散計算の設定って近いんだよなと思い，$k$-vertex coverのアイデアを分散計算にも適用できないかなと思いつく．ちょっと調べると，<a href="https://arxiv.org/abs/1807.04900">実は近いことはやられている</a>ことがわかった．そして，その分散の$k$-matchingのアルゴリズムをベースに，$k$-matchingに対する量子クエリアルゴリズムを設計した．それでこの二つを組合せて論文化した．</p>
     </li>
     <li>
         <div class="color-box">
