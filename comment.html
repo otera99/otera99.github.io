@@ -59,7 +59,7 @@ MathJax = {
         <strong>"Deterministic $(2/3 - \varepsilon)$-Approximation of Matroid Intersection using Nearly-Linear Independence-Oracle Queries"</strong> <br />
         Tatsuya Terao <br />
         </div>
-        <p>マトロイド交叉問題のrandom-orderでのstreamingアルゴリズムの論文 <a href="https://arxiv.org/abs/2310.16827">[Huang-Sellier'24]</a>を読んで，自分もマトロイド交叉問題に関するstreamingアルゴリズムについて何かできないかと考え始めた．マッチングに対する最も初期のsemi-streamingアルゴリズムの論文 <a href="https://www.sciencedirect.com/science/article/pii/S0304397505005323">[FKMSZ'05]</a>を読んでる際に，マッチングだと，長さ3のaugmenting pathをほとんど見つけ切れば，$(2/3-\varepsilon)$-近似が達成でき，これは簡単にstreamingで実装できることを知った．その後，同様のアイデアで，最近のマトロイド交叉問題に対するaugmenting setsを使った$(1-
+        <p>マトロイド交叉問題のrandom-orderでのstreamingアルゴリズムの論文 <a href="https://arxiv.org/abs/2310.16827">[Huang-Sellier'24]</a>を読んで，自分もマトロイド交叉問題に関するstreamingアルゴリズムについて何かできないかと考え始めた．マッチングに対する最も初期のsemi-streamingアルゴリズムの論文 <a href="https://www.sciencedirect.com/science/article/pii/S0304397505005323">[FKMSZ'05]</a>を読み，マッチングだと，長さ3のaugmenting pathをほとんど見つけ切れば，$(2/3-\varepsilon)$-近似が達成でき，これは簡単にstreamingで実装できることを知った．その後，同様のアイデアで，最近のマトロイド交叉問題に対するaugmenting setsを使った$(1-
         \varepsilon)$-近似アルゴリズム <a href="https://arxiv.org/abs/2105.05673">[Blikstad'21]</a>を途中($1/\varepsilon$ rounds)で止めるだけで，$(2/3-\varepsilon)$-近似が達成できることに気が付いた．また，これは，streamingだけではなく，offlineの設定でも，ほぼ線形回の独立性オラクルへのクエリで$(2/3-\varepsilon)$-近似が達成できているという面白い結果を意味していることに気がついた．
         </p>
     </li>
@@ -75,7 +75,7 @@ MathJax = {
         <strong>"Subquadratic Submodular Maximization with a General Matroid Constraint"</strong> <br />
         Yusuke Kobayashi, Tatsuya Terao <br />
         </div>
-        <p>ICALP'23で自分の発表のちょうど次の発表が，特殊なマトロイド制約の劣モジュラ関数最大化問題を高速化するという<a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2023.74">論文</a>についてだった．それを聞いた際に，一般のマトロイドでオラクルの設定で，(最近のマトロイド交叉の高速化に使われている)二分探索のテクニックを使って高速化できないだろうかと思った．その後，(マトロイド制約での劣モジュラ最大化のアルゴリズムの肝となる) swap roundingの論文についてゼミで小林先生と話している時に，小林先生が(マトロイド交叉のアルゴリズムに用いる)交換可能グラフのような補助グラフの中で有向サイクルを高速に見つけることができれば，丸めアルゴリズムが高速化できてことに気が付いた．その週末，<a href="https://lealgorithm.blogspot.com/2021/10/15.html">清水先生のブログに載っているアルゴリズム</a>のことをふと思い出し，そこから着想を得て，$\tilde{O}(\sqrt{r})$個の頂点をグラフからサンプルすることで，高速なアルゴリズムを設計できることを思いついた．後の<a href="https://ieeexplore.ieee.org/abstract/document/10756170?casa_token=UF0FXotrM7IAAAAA:YGLO2kpagK6Jspj91jfBsFHz_e5QH_h3OcOdpSMBW7_N2J8LN1dgunY7Gtyj7Lr6u4kkA_HdmZo">論文</a>で計算量は抜かれたが，そのあとに出た現状最速の<a href="https://arxiv.org/abs/2409.14325">論文</a>では我々のアルゴリズムを使用している．(連続最適化の部分が高速化された．)
+        <p>ICALP'23で自分の発表のちょうど次の発表が，特殊なマトロイド制約の劣モジュラ関数最大化問題を高速化するという<a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2023.74">論文</a>についてだった．それを聞いた際に，一般のマトロイドでオラクルの設定で，(最近のマトロイド交叉の高速化に使われている)二分探索のテクニックを使って高速化できないだろうかと思った．その後，(マトロイド制約での劣モジュラ最大化のアルゴリズムの肝となる) swap roundingの論文について小林先生と話している時に，小林先生が(マトロイド交叉のアルゴリズムに用いる)交換可能グラフのような補助グラフの中で有向サイクルを高速に見つけることができれば，丸めアルゴリズムが高速化できてことに気が付いた．その週末，<a href="https://lealgorithm.blogspot.com/2021/10/15.html">清水先生のブログに載っているアルゴリズム</a>のことをふと思い出し，そこから着想を得て，$\tilde{O}(\sqrt{r})$個の頂点をグラフからサンプルすることで，高速なアルゴリズムを設計できることを思いついた．後の<a href="https://ieeexplore.ieee.org/abstract/document/10756170?casa_token=UF0FXotrM7IAAAAA:YGLO2kpagK6Jspj91jfBsFHz_e5QH_h3OcOdpSMBW7_N2J8LN1dgunY7Gtyj7Lr6u4kkA_HdmZo">論文</a>で計算量は抜かれたが，その後に出た現状最速の<a href="https://arxiv.org/abs/2409.14325">論文</a>では我々のアルゴリズムを使用している．(連続最適化の部分が高速化された．)
         </p>
     </li>
     <li>
