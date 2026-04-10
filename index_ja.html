@@ -176,9 +176,43 @@ MathJax = {
 
 <ol reversed>
     <li>
-        <strong>Polynomial Kernels with Reachability for Weighted $d$-Matroid Intersection</strong> <br />
+        <strong>Faster Approximate Linear Matroid Intersection</strong>  <br />
+        Tatsuya Terao <br />
+        To appear in Proceedings of the 20th Scandinavian Symposium on Algorithm Theory (<strong>SWAT 2026</strong>) <br />
+        <div class="openbox">
+            <label for="swat26"><i class="bi bi-chevron-expand"></i> Abstract</label>
+            <input id="swat26" class="inputcss" type="checkbox" />
+            <span class="boxshow">
+                <div class="box6">
+                    We consider a fast approximation algorithm for the linear matroid intersection problem. In this problem, we are given two $r \times n$ matrices $M_1$ and $M_2$, and the objective is to find a largest set of columns that are linearly independent in both $M_1$ and $M_2$. We design a $(1 - \varepsilon)$-approximation algorithm with time complexity $\tilde{O}_{\varepsilon}(\mathrm{nnz}(M_1) + \mathrm{nnz}(M_2) + r_{*}^{\omega})$, where $\mathrm{nnz}(M_i)$ denotes the number of nonzero entries in $M_i$ for $i = 1, 2$, $r_{*}$ denotes the maximum size of a common independent set, and $\omega < 2.372$ denotes the matrix multiplication exponent. Our approximation algorithm is faster than the exact algorithm by Harvey [FOCS'06 & SICOMP'09] and Cheung--Kwok--Lau [STOC'12 & JACM'13], which runs in $\tilde{O}(\mathrm{nnz}(M_1) + \mathrm{nnz}(M_2) + n r_{*}^{\omega - 1})$ time. <br/>
+
+                    We also develop a fast $(1 - \varepsilon)$-approximation algorithm for the weighted version of the linear matroid intersection problem. In fact, we design a $(1 - \varepsilon)$-approximation algorithm for weighted linear matroid intersection with time complexity $\tilde{O}_{\varepsilon}(\mathrm{nnz}(M_1) + \mathrm{nnz}(M_2) + r_{*}^{\omega})$. Our algorithm improves upon the $(1 - \varepsilon)$-approximation algorithm by Huang--Kakimura--Kamiyama [SODA'16 & Math. Program.'19], which runs in $\tilde{O}_{\varepsilon}(\mathrm{nnz}(M_1) + \mathrm{nnz}(M_2) + nr_{*}^{\omega - 1})$ time. <br/>
+
+                    To obtain these results, we combine Quanrud's adaptive sparsification framework [ICALP'24] with a simple yet effective method for efficiently checking whether a given vector lies in the linear span of a subset of vectors, which is of independent interest.
+                </div>
+            </span>
+        </div>
+    </li>
+    <li>
+        <strong>Polynomial Kernels with Reachability for Weighted $d$-Matroid Intersection</strong> <a href="https://arxiv.org/pdf/2603.17345" class="paper-button">arXiv</a> <br />
         <a href="https://www.di.ens.fr/~cchuang/">Chien-Chung Huang</a>, <a href="https://opt.math.keio.ac.jp/kakimura/index.html">Naonori Kakimura</a>, <a href="https://www.kurims.kyoto-u.ac.jp/~yusuke/eindex.html">Yusuke Kobayashi</a>, Tatsuya Terao <br />
         To appear in Proceedings of the 27th Conference on Integer Programming and Combinatorial Optimization (<strong>IPCO 2026</strong>) <br />
+        <div class="openbox">
+            <label for="ipco26"><i class="bi bi-chevron-expand"></i> Abstract</label>
+            <input id="ipco26" class="inputcss" type="checkbox" />
+            <span class="boxshow">
+                <div class="box6">
+                    This paper studies randomized polynomial kernelization for the weighted $d$-matroid intersection problem.
+                    While the problem is known to have a kernel of size $O(d^{(k - 1)d})$ where $k$ is the solution size,  the existence of a polynomial kernel is not known, except for the cases when either all the given matroids are partition matroids~(i.e., the $d$-dimensional matching problem) or all the given matroids are linearly representable.
+                    The main contribution of this paper is to develop a new kernelization technique for handling general matroids.
+                    We first show that the weighted $d$-matroid intersection problem admits a polynomial kernel when one matroid is arbitrary and the other $d-1$ matroids are partition matroids.
+                    Interestingly, the obtained kernel has size $\tilde{O}(k^d)$, which matches the optimal bound~(up to logarithmic factors) for the $d$-dimensional matching problem.
+                    This approach can be adapted to the case when $d-1$ matroids in the input belong to a more general class of matroids, including graphic, cographic, and transversal matroids.
+                    We also show that the problem has a kernel of pseudo-polynomial size when given $d-1$ matroids are laminar.
+                    Our technique finds a kernel such that any feasible solution of a given instance can reach a better solution in the kernel, which is sufficiently versatile to allow us to design parameterized streaming algorithms and faster EPTASs.
+                </div>
+            </span>
+        </div>
     </li>
     <li>
         <strong>Deterministic $(2/3 - \varepsilon)$-Approximation of Matroid Intersection Using Nearly-Linear Independence-Oracle Queries</strong> <a href="https://arxiv.org/abs/2410.18820" class="paper-button">arXiv</a> <a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol349-wads2025/LIPIcs.WADS.2025.50/LIPIcs.WADS.2025.50.pdf" class="paper-button">proceeding</a> <a href="eslide/2025.08.13.WADS.pdf" class="slides-button">slides@WADS</a><br />
@@ -333,6 +367,11 @@ MathJax = {
 <h5>国内学会・研究会発表</h5>
 
 <ul>
+    <li><u>寺尾樹哉</u>: 「<strong>線形マトロイド交叉問題に対する高速な近似アルゴリズム</strong>」
+        <ul class="presentations">
+            <li> 2025年度冬のLAシンポジウム, 2026年1月28日, 京都大学. <a href="jslide/2026.01.28.LA.pdf" class="slides-button">slides</a>
+        </ul>
+    </li>
     <li><u>寺尾樹哉</u>: 「<strong>準線形回の独立性オラクルへのクエリを使用するマトロイド交叉問題の決定的な$(2/3-\varepsilon)$-近似アルゴリズム</strong>」
         <ul class="presentations">
             <li> コンピュテーション研究会 (COMP), 2025年12月5日, 愛媛大学. <a href="jslide/2025.12.05.COMP.pdf" class="slides-button">slides</a>
@@ -372,6 +411,7 @@ MathJax = {
 <h4><i class="bi bi-award"></i> 受賞</h4>
 <div class="naiyou">
 <ul>
+    <li>2025年度冬のLAシンポジウム 学生発表論文賞, 2026年1月28日. <a href="https://la-symposium.github.io/2025/winter.html#laeatcs-japan-発表論文賞学生発表論文賞-laeatcs-japan-presentation-award-student-presentation-award" class="link-button">link</a></li>
     <li>日本応用数理学会 2024年度年会 若手優秀講演賞, 2025年6月27日. <a href="https://jsiam.org/award/young_lecture_award/%e7%ac%ac21%e5%9b%9e-%e8%8b%a5%e6%89%8b%e5%84%aa%e7%a7%80%e8%ac%9b%e6%bc%94%e8%b3%9e-2024%e5%b9%b4%e5%ba%a6/" class="link-button">link</a></li>
     <li>最適化の理論とアルゴリズム:未来を担う若手研究者の集い 2025, 最優秀発表賞, 2025年6月1日. <a href="https://orsj.org/raota/#tsukuba25" class="link-button">link</a></li>
     <li>OR学会 第42回学生論文賞, 2024年9月10日. <a href="https://orsj.org/?page_id=1125" class="link-button">link</a></li>
@@ -400,10 +440,57 @@ MathJax = {
 </div>
 
 <footer>
-    <p style="text-align: right">
-        <font size="3.5">最終更新日: 2026年1月18日</font>
+    <p class="footer-right">
+        <font size="3.5" id="last-update-ja">最終更新日: 読み込み中...</font>
     </p>
 </footer>
+
+<script>
+(async function () {
+    const owner = "otera99";
+    const repo = "otera99.github.io";
+    const path = "index_ja.html";
+
+    const url =
+        `https://api.github.com/repos/${owner}/${repo}/commits` +
+        `?path=${encodeURIComponent(path)}&per_page=1`;
+
+    try {
+        const res = await fetch(url, {
+            headers: {
+                "Accept": "application/vnd.github+json"
+            }
+        });
+
+        if (!res.ok) {
+            throw new Error(`GitHub API error: ${res.status}`);
+        }
+
+        const commits = await res.json();
+        if (!Array.isArray(commits) || commits.length === 0) {
+            throw new Error("No commit found.");
+        }
+
+        const iso = commits[0].commit.committer.date;
+        const date = new Date(iso);
+
+        const y = date.getUTCFullYear();
+        const m = date.getUTCMonth() + 1;
+        const d = date.getUTCDate();
+
+        const elem = document.getElementById("last-update-ja");
+        if (elem) {
+            elem.textContent = `最終更新日: ${y}年${m}月${d}日`;
+        }
+    } catch (err) {
+        console.error(err);
+        const elem = document.getElementById("last-update-ja");
+        if (elem) {
+            elem.textContent = "最終更新日: 取得失敗";
+        }
+    }
+})();
+</script>
 
 </body>
 
