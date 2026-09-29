@@ -1,2 +1,2 @@
 Paper rejections ordered by submission date ...
-Conferences: ICALP'24, SOSA'25, QIP'25, IPCO'25, SOSA'26, IPCO'26
+Conferences: ICALP'24, SOSA'25, QIP'25, IPCO'25, SOSA'26, IPCO'26, SODA'27

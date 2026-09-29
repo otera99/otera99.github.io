@@ -69,8 +69,8 @@ MathJax = {
 <div class="naiyou">
 
 <!-- <p><font size="5">About Me</font></p> -->
-<p>I am Tatsuya Terao, a second-year doctoral student in <a href="https://www.kurims.kyoto-u.ac.jp/coss/index-e.html">Discrete Optimization Group</a> at <a href="https://www.kurims.kyoto-u.ac.jp/en/index.html">Research Institute for Mathematical Sciences</a> and I am fortunate to be advised by <a href="https://www.kurims.kyoto-u.ac.jp/~yusuke/eindex.html">Yusuke Kobayashi</a>.
-I have a interest in the design and analysis of algorithms in theoretical computer science.
+<p>I am Tatsuya Terao, a third-year doctoral student in <a href="https://www.kurims.kyoto-u.ac.jp/coss/index-e.html">Discrete Optimization Group</a> at <a href="https://www.kurims.kyoto-u.ac.jp/en/index.html">Research Institute for Mathematical Sciences</a> and I am fortunate to be advised by <a href="https://www.kurims.kyoto-u.ac.jp/~yusuke/eindex.html">Yusuke Kobayashi</a>.
+I have an interest in the design and analysis of algorithms in theoretical computer science.
 
 <p><font size="4">
     <i class="bi bi-envelope"></i> : ttatsuya [ at ] kurims.kyoto-u.ac.jp</font></p>
@@ -100,15 +100,35 @@ I have a interest in the design and analysis of algorithms in theoretical comput
 <div class="naiyou">
 <p>See also <a href="https://dblp.org/pid/335/5620.html">DBLP</a> for an up-to-date list.</p>
 
-<p>As is the convention in theoretical computer science, authors are listed alphabetically. Exceptions are marked with &dagger;.</p>
+<p>As is <a href="https://www.ams.org/profession/leaders/culture/JointResearchandItsPublicationfinal.pdf">the convention in theoretical computer science</a>, authors are listed alphabetically, except that ⓒ and ⓡ are used in place of commas to indicate contribution order and random order, respectively.</p>
 
 <h5>Refereed Papers</h5>
 
 <ol reversed>
     <li>
-        <strong>Faster Approximate Linear Matroid Intersection</strong>  <br />
+        <strong>Almost Optimal Streaming and Cut-Query Algorithms for Undirected Max-Flow</strong> <br />
+        <a href="https://yonggangjiang.github.io/">Yonggang Jiang</a>, Tatsuya Terao <br />
+        To appear in Proceedings of the 38th ACM-SIAM Symposium on Discrete Algorithms (<strong>SODA 2027</strong>) <br />
+        <div class="openbox">
+            <label for="soda27"><i class="bi bi-chevron-expand"></i> Abstract</label>
+            <input id="soda27" class="inputcss" type="checkbox" />
+            <span class="boxshow">
+                <div class="box6">
+                    We study exact $s$--$t$ maximum flow in undirected graphs in two models: the graph-streaming model and the cut-query model. For unit-capacity graphs on $n$ vertices, we give a randomized algorithm that outputs an exact maximum flow using $n^{3/2+o(1)}$ space and $n^{o(1)}$ passes in the streaming model, and using $n^{3/2+o(1)}$ cut queries in the cut-query model. These bounds are optimal up to subpolynomial factors for algorithms that output the flow.
+
+                    More generally, for undirected graphs with edge capacities whose $s$--$t$ maximum-flow value is $F$, our algorithms output an exact maximum flow using $n^{1+o(1)}\sqrt F$ space and $n^{o(1)}$ passes in the streaming model, and using $n^{1+o(1)}\sqrt F$ cut queries in the cut-query model. These bounds are again optimal up to subpolynomial factors for algorithms that output the flow.
+
+                    Our algorithm is based on a sparse flow emulator for undirected graphs built from an expander hierarchy. The central new ingredient is a flow routing procedure for the emulator avoiding the cut-matching game.
+                </div>
+            </span>
+        </div>
+    </li>
+
+    <li>
+        <strong>Faster Approximate Linear Matroid Intersection</strong> <a href="https://arxiv.org/abs/2604.11725" class="paper-button">arXiv</a> <a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol370-swat2026/LIPIcs.SWAT.2026.39/LIPIcs.SWAT.2026.39.pdf" class="paper-button">proceeding</a> <a href="eslide/2026.06.19.SWAT.pdf" class="slides-button">slides@SWAT</a> <br />
         Tatsuya Terao <br />
-        To appear in Proceedings of the 20th Scandinavian Symposium on Algorithm Theory (<strong>SWAT 2026</strong>) <br />
+        Proceedings of the 20th Scandinavian Symposium on Algorithm Theory (<strong>SWAT 2026</strong>) <br />
+        <strong>Best Student Paper</strong> <br />
         <div class="openbox">
             <label for="swat26"><i class="bi bi-chevron-expand"></i> Abstract</label>
             <input id="swat26" class="inputcss" type="checkbox" />
@@ -124,16 +144,16 @@ I have a interest in the design and analysis of algorithms in theoretical comput
         </div>
     </li>
     <li>
-        <strong>Polynomial Kernels with Reachability for Weighted $d$-Matroid Intersection</strong> <a href="https://arxiv.org/pdf/2603.17345" class="paper-button">arXiv</a> <br />
+        <strong>Polynomial Kernels with Reachability for Weighted $d$-Matroid Intersection</strong> <a href="https://arxiv.org/pdf/2603.17345" class="paper-button">arXiv</a> <a href="https://link.springer.com/chapter/10.1007/978-3-032-28691-8_24" class="paper-button">proceeding</a> <br />
         <a href="https://www.di.ens.fr/~cchuang/">Chien-Chung Huang</a>, <a href="https://opt.math.keio.ac.jp/kakimura/index.html">Naonori Kakimura</a>, <a href="https://www.kurims.kyoto-u.ac.jp/~yusuke/eindex.html">Yusuke Kobayashi</a>, Tatsuya Terao <br />
-        To appear in Proceedings of the 27th Conference on Integer Programming and Combinatorial Optimization (<strong>IPCO 2026</strong>) <br />
+        Proceedings of the 27th Conference on Integer Programming and Combinatorial Optimization (<strong>IPCO 2026</strong>) <br />
         <div class="openbox">
             <label for="ipco26"><i class="bi bi-chevron-expand"></i> Abstract</label>
             <input id="ipco26" class="inputcss" type="checkbox" />
             <span class="boxshow">
                 <div class="box6">
                     This paper studies randomized polynomial kernelization for the weighted $d$-matroid intersection problem.
-                    While the problem is known to have a kernel of size $O(d^{(k - 1)d})$ where $k$ is the solution size,  the existence of a polynomial kernel is not known, except for the cases when either all the given matroids are partition matroids~(i.e., the $d$-dimensional matching problem) or all the given matroids are linearly representable.
+                    While the problem is known to have a kernel of size $O(d^{(k - 1)d})$ where $k$ is the solution size,  the existence of a polynomial kernel is not known, except for the cases when either all the given matroids are partition matroids (i.e., the $d$-dimensional matching problem) or all the given matroids are linearly representable.
                     The main contribution of this paper is to develop a new kernelization technique for handling general matroids.
                     We first show that the weighted $d$-matroid intersection problem admits a polynomial kernel when one matroid is arbitrary and the other $d-1$ matroids are partition matroids.
                     Interestingly, the obtained kernel has size $\tilde{O}(k^d)$, which matches the optimal bound~(up to logarithmic factors) for the $d$-dimensional matching problem.
@@ -159,8 +179,8 @@ I have a interest in the design and analysis of algorithms in theoretical comput
         </div>
     </li>
     <li>
-        <strong>Parameterized Quantum Query Algorithms for Graph Problems</strong> &dagger; <a href="https://arxiv.org/abs/2408.03864" class="paper-button">arXiv</a> <a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol308-esa2024/LIPIcs.ESA.2024.99/LIPIcs.ESA.2024.99.pdf" class="paper-button">proceeding</a> <a href="eslide/2024.09.04.ESA.pdf" class="slides-button">slides@ESA</a> <br />
-        Tatsuya Terao, <a href="https://ryuhei-mori.github.io/">Ryuhei Mori</a> <br />
+        <strong>Parameterized Quantum Query Algorithms for Graph Problems</strong> <a href="https://arxiv.org/abs/2408.03864" class="paper-button">arXiv</a> <a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol308-esa2024/LIPIcs.ESA.2024.99/LIPIcs.ESA.2024.99.pdf" class="paper-button">proceeding</a> <a href="eslide/2024.09.04.ESA.pdf" class="slides-button">slides@ESA</a> <br />
+        Tatsuya Terao ⓒ <a href="https://ryuhei-mori.github.io/">Ryuhei Mori</a> <br />
         Proceedings of the 32nd Annual European Symposium on Algorithms (<strong>ESA 2024</strong>) <br />
         <div class="openbox">
         <label for="esa2024"><i class="bi bi-chevron-expand"></i> Abstract</label>
@@ -246,8 +266,6 @@ I have a interest in the design and analysis of algorithms in theoretical comput
 
 <h5>Manuscripts</h5>
 <p>Coming soon.</p>
-<!-- <ol reversed>
-</ol> -->
 </div>
 
 <!-- <hr> -->

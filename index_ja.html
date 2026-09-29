@@ -88,6 +88,8 @@ MathJax = {
     </ul>
     </div>
     <p class="pside"><i class="bi bi-award"></i> <a href="#award">受賞</a></p> 
+    <p class="pside"><i class="bi bi-clipboard-check"></i> <a href="#activity">活動</a></p> 
+    <p class="pside"><i class="bi bi-cash-coin"></i> <a href="#funding">研究費</a></p>
     <p class="pside"><i class="bi bi-link"></i> <a href="#link">リンク集</a></p> 
 </div>
 
@@ -131,7 +133,7 @@ MathJax = {
 
 <div class="naiyou-top">
 
-    <p><font size="4">京都大学 数理解析研究所 博士後期課程2年</font></p>
+    <p><font size="4">京都大学 数理解析研究所 博士後期課程3年</font></p>
     <p><font size="4">
     〒606-8502 京都市左京区北白川追分町</font></p>
     <p><font size="4">Email: ttatsuya [ at ] kurims.kyoto-u.ac.jp</font></p>
@@ -153,7 +155,7 @@ MathJax = {
 
     <h5>職歴</h5>
     <ul>
-        <li>2024年4月 - 2027年3月 日本学術振興会特別研究員(DC1) 「マトロイドに関する問題に対する理論的に高速なアルゴリズムの設計」<a href="https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-24KJ1494/" class="link-button">link</a></li>
+        <li>2024年4月 - 2027年3月 日本学術振興会特別研究員(DC1)</li>
     </ul>
 </div>
 </section>
@@ -169,24 +171,44 @@ MathJax = {
 <h4><i class="bi bi-file-earmark-check"></i> 論文</h4>
 <div class="naiyou">
 <!-- <p><a href="comment.html"><font size="4">各論文に関するコメントはこちら．</font></a></p> -->
-<p>著者順は基本的にアルファベット順．(但し、&dagger;がついているものを除く．)</p>
+<p><a href="https://www.ams.org/profession/leaders/culture/JointResearchandItsPublicationfinal.pdf">理論計算機学の慣習により</a>、著者順は基本的にアルファベット順。(但し、ⓒで区切っているものは貢献度順、ⓡで区切っているものの著者順はランダムである。)</p>
 
 <section id="review">
 <h5>査読付き論文</h5>
 
 <ol reversed>
     <li>
-        <strong>Faster Approximate Linear Matroid Intersection</strong>  <br />
+        <strong>Almost Optimal Streaming and Cut-Query Algorithms for Undirected Max-Flow</strong> <br />
+        <a href="https://yonggangjiang.github.io/">Yonggang Jiang</a>, Tatsuya Terao <br />
+        To appear in Proceedings of the 38th ACM-SIAM Symposium on Discrete Algorithms (<strong>SODA 2027</strong>) <br />
+        <div class="openbox">
+            <label for="soda27"><i class="bi bi-chevron-expand"></i> Abstract</label>
+            <input id="soda27" class="inputcss" type="checkbox" />
+            <span class="boxshow">
+                <div class="box6">
+                    We study exact $s$--$t$ maximum flow in undirected graphs in two models: the graph-streaming model and the cut-query model. For unit-capacity graphs on $n$ vertices, we give a randomized algorithm that outputs an exact maximum flow using $n^{3/2+o(1)}$ space and $n^{o(1)}$ passes in the streaming model, and using $n^{3/2+o(1)}$ cut queries in the cut-query model. These bounds are optimal up to subpolynomial factors for algorithms that output the flow.
+
+                    More generally, for undirected graphs with edge capacities whose $s$--$t$ maximum-flow value is $F$, our algorithms output an exact maximum flow using $n^{1+o(1)}\sqrt F$ space and $n^{o(1)}$ passes in the streaming model, and using $n^{1+o(1)}\sqrt F$ cut queries in the cut-query model. These bounds are again optimal up to subpolynomial factors for algorithms that output the flow.
+
+                    Our algorithm is based on a sparse flow emulator for undirected graphs built from an expander hierarchy. The central new ingredient is a flow routing procedure for the emulator avoiding the cut-matching game.
+                </div>
+            </span>
+        </div>
+    </li>
+
+    <li>
+        <strong>Faster Approximate Linear Matroid Intersection</strong> <a href="https://arxiv.org/abs/2604.11725" class="paper-button">arXiv</a> <a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol370-swat2026/LIPIcs.SWAT.2026.39/LIPIcs.SWAT.2026.39.pdf" class="paper-button">proceeding</a> <a href="eslide/2026.06.19.SWAT.pdf" class="slides-button">slides@SWAT</a> <br />
         Tatsuya Terao <br />
-        To appear in Proceedings of the 20th Scandinavian Symposium on Algorithm Theory (<strong>SWAT 2026</strong>) <br />
+        Proceedings of the 20th Scandinavian Symposium on Algorithm Theory (<strong>SWAT 2026</strong>) <br />
+        <strong>Best Student Paper</strong> <br />
         <div class="openbox">
             <label for="swat26"><i class="bi bi-chevron-expand"></i> Abstract</label>
             <input id="swat26" class="inputcss" type="checkbox" />
             <span class="boxshow">
                 <div class="box6">
-                    We consider a fast approximation algorithm for the linear matroid intersection problem. In this problem, we are given two $r \times n$ matrices $M_1$ and $M_2$, and the objective is to find a largest set of columns that are linearly independent in both $M_1$ and $M_2$. We design a $(1 - \varepsilon)$-approximation algorithm with time complexity $\tilde{O}_{\varepsilon}(\mathrm{nnz}(M_1) + \mathrm{nnz}(M_2) + r_{*}^{\omega})$, where $\mathrm{nnz}(M_i)$ denotes the number of nonzero entries in $M_i$ for $i = 1, 2$, $r_{*}$ denotes the maximum size of a common independent set, and $\omega < 2.372$ denotes the matrix multiplication exponent. Our approximation algorithm is faster than the exact algorithm by Harvey [FOCS'06 & SICOMP'09] and Cheung--Kwok--Lau [STOC'12 & JACM'13], which runs in $\tilde{O}(\mathrm{nnz}(M_1) + \mathrm{nnz}(M_2) + n r_{*}^{\omega - 1})$ time. <br/>
+                    We consider a fast approximation algorithm for the linear matroid intersection problem. In this problem, we are given two $r \times n$ matrices $M_1$ and $M_2$, and the objective is to find a largest set of columns that are linearly independent in both $M_1$ and $M_2$. We design a $(1 - \varepsilon)$-approximation algorithm with time complexity $\tilde{O}_{\varepsilon}(\mathrm{nnz}(M_1) + \mathrm{nnz}(M_2) + r_{*}^{\omega})$, where $\mathrm{nnz}(M_i)$ denotes the number of nonzero entries in $M_i$ for $i = 1, 2$, $r_{*}$ denotes the maximum size of a common independent set, and $\omega < 2.372$ denotes the matrix multiplication exponent. Our approximation algorithm is faster than the exact algorithm by Harvey [FOCS'06 & SICOMP'09] and Cheung-Kwok-Lau [STOC'12 & JACM'13], which runs in $\tilde{O}(\mathrm{nnz}(M_1) + \mathrm{nnz}(M_2) + n r_{*}^{\omega - 1})$ time. <br/>
 
-                    We also develop a fast $(1 - \varepsilon)$-approximation algorithm for the weighted version of the linear matroid intersection problem. In fact, we design a $(1 - \varepsilon)$-approximation algorithm for weighted linear matroid intersection with time complexity $\tilde{O}_{\varepsilon}(\mathrm{nnz}(M_1) + \mathrm{nnz}(M_2) + r_{*}^{\omega})$. Our algorithm improves upon the $(1 - \varepsilon)$-approximation algorithm by Huang--Kakimura--Kamiyama [SODA'16 & Math. Program.'19], which runs in $\tilde{O}_{\varepsilon}(\mathrm{nnz}(M_1) + \mathrm{nnz}(M_2) + nr_{*}^{\omega - 1})$ time. <br/>
+                    We also develop a fast $(1 - \varepsilon)$-approximation algorithm for the weighted version of the linear matroid intersection problem. In fact, we design a $(1 - \varepsilon)$-approximation algorithm for weighted linear matroid intersection with time complexity $\tilde{O}_{\varepsilon}(\mathrm{nnz}(M_1) + \mathrm{nnz}(M_2) + r_{*}^{\omega})$. Our algorithm improves upon the $(1 - \varepsilon)$-approximation algorithm by Huang-Kakimura-Kamiyama [SODA'16 & Math. Program.'19], which runs in $\tilde{O}_{\varepsilon}(\mathrm{nnz}(M_1) + \mathrm{nnz}(M_2) + nr_{*}^{\omega - 1})$ time. <br/>
 
                     To obtain these results, we combine Quanrud's adaptive sparsification framework [ICALP'24] with a simple yet effective method for efficiently checking whether a given vector lies in the linear span of a subset of vectors, which is of independent interest.
                 </div>
@@ -194,16 +216,16 @@ MathJax = {
         </div>
     </li>
     <li>
-        <strong>Polynomial Kernels with Reachability for Weighted $d$-Matroid Intersection</strong> <a href="https://arxiv.org/pdf/2603.17345" class="paper-button">arXiv</a> <br />
+        <strong>Polynomial Kernels with Reachability for Weighted $d$-Matroid Intersection</strong> <a href="https://arxiv.org/pdf/2603.17345" class="paper-button">arXiv</a> <a href="https://link.springer.com/chapter/10.1007/978-3-032-28691-8_24" class="paper-button">proceeding</a> <br />
         <a href="https://www.di.ens.fr/~cchuang/">Chien-Chung Huang</a>, <a href="https://opt.math.keio.ac.jp/kakimura/index.html">Naonori Kakimura</a>, <a href="https://www.kurims.kyoto-u.ac.jp/~yusuke/eindex.html">Yusuke Kobayashi</a>, Tatsuya Terao <br />
-        To appear in Proceedings of the 27th Conference on Integer Programming and Combinatorial Optimization (<strong>IPCO 2026</strong>) <br />
+        Proceedings of the 27th Conference on Integer Programming and Combinatorial Optimization (<strong>IPCO 2026</strong>) <br />
         <div class="openbox">
             <label for="ipco26"><i class="bi bi-chevron-expand"></i> Abstract</label>
             <input id="ipco26" class="inputcss" type="checkbox" />
             <span class="boxshow">
                 <div class="box6">
                     This paper studies randomized polynomial kernelization for the weighted $d$-matroid intersection problem.
-                    While the problem is known to have a kernel of size $O(d^{(k - 1)d})$ where $k$ is the solution size,  the existence of a polynomial kernel is not known, except for the cases when either all the given matroids are partition matroids~(i.e., the $d$-dimensional matching problem) or all the given matroids are linearly representable.
+                    While the problem is known to have a kernel of size $O(d^{(k - 1)d})$ where $k$ is the solution size,  the existence of a polynomial kernel is not known, except for the cases when either all the given matroids are partition matroids (i.e., the $d$-dimensional matching problem) or all the given matroids are linearly representable.
                     The main contribution of this paper is to develop a new kernelization technique for handling general matroids.
                     We first show that the weighted $d$-matroid intersection problem admits a polynomial kernel when one matroid is arbitrary and the other $d-1$ matroids are partition matroids.
                     Interestingly, the obtained kernel has size $\tilde{O}(k^d)$, which matches the optimal bound~(up to logarithmic factors) for the $d$-dimensional matching problem.
@@ -229,8 +251,8 @@ MathJax = {
             </div>
     </li>
     <li>
-        <strong>Parameterized Quantum Query Algorithms for Graph Problems</strong> &dagger; <a href="https://arxiv.org/abs/2408.03864" class="paper-button">arXiv</a> <a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol308-esa2024/LIPIcs.ESA.2024.99/LIPIcs.ESA.2024.99.pdf" class="paper-button">proceeding</a> <a href="eslide/2024.09.04.ESA.pdf" class="slides-button">slides@ESA</a> <br />
-        Tatsuya Terao, <a href="https://ryuhei-mori.github.io/">Ryuhei Mori</a> <br />
+        <strong>Parameterized Quantum Query Algorithms for Graph Problems</strong> <a href="https://arxiv.org/abs/2408.03864" class="paper-button">arXiv</a> <a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol308-esa2024/LIPIcs.ESA.2024.99/LIPIcs.ESA.2024.99.pdf" class="paper-button">proceeding</a> <a href="eslide/2024.09.04.ESA.pdf" class="slides-button">slides@ESA</a> <br />
+        Tatsuya Terao ⓒ <a href="https://ryuhei-mori.github.io/">Ryuhei Mori</a> <br />
         Proceedings of the 32nd Annual European Symposium on Algorithms (<strong>ESA 2024</strong>) <br />
         <div class="openbox">
         <label for="esa2024"><i class="bi bi-chevron-expand"></i> Abstract</label>
@@ -243,7 +265,7 @@ MathJax = {
                 In the $k$-vertex cover problem, we are given an undirected graph $G$ with $n$ vertices and an integer $k$, and the objective is to determine whether $G$ has a vertex cover of size at most $k$. We show that the quantum query complexity of the $k$-vertex cover problem is $O(\sqrt{k}n + k^{3/2}\sqrt{n})$ in the adjacency matrix model. For the design of the quantum query algorithm, we use the method of kernelization, a well-known tool for the design of parameterized classical algorithms, combined with Grover's search. <br/>
                 
                 <b>Parameterized quantum query complexity of matching.</b>
-                In the $k$-matching problem, we are given an undirected graph $G$ with $n$ vertices and an integer $k$, and the objective is to determine whether $G$ has a matching of size at least $k$. We show that the quantum query complexity of the $k$-matching problem is $O(\sqrt{k}n + k^{2})$ in the adjacency matrix model. We obtain this upper bound by using Grover's search carefully and analyzing the number of Grover's searches by making use of potential functions. We also show that the quantum query complexity of the maximum matching problem is $O(\sqrt{p}n + p^{2})$ where $p$ is the size of the maximum matching. For small $p$, it improves known bounds $\tilde{O}(n^{3/2})$ for bipartite graphs [Blikstad--v.d.Brand--Efron--Mukhopadhyay--Nanongkai, FOCS 2022] and $O(n^{7/4})$ for general graphs [Kimmel--Witter, WADS 2021]. <br/>
+                In the $k$-matching problem, we are given an undirected graph $G$ with $n$ vertices and an integer $k$, and the objective is to determine whether $G$ has a matching of size at least $k$. We show that the quantum query complexity of the $k$-matching problem is $O(\sqrt{k}n + k^{2})$ in the adjacency matrix model. We obtain this upper bound by using Grover's search carefully and analyzing the number of Grover's searches by making use of potential functions. We also show that the quantum query complexity of the maximum matching problem is $O(\sqrt{p}n + p^{2})$ where $p$ is the size of the maximum matching. For small $p$, it improves known bounds $\tilde{O}(n^{3/2})$ for bipartite graphs [Blikstad-v.d.Brand-Efron-Mukhopadhyay-Nanongkai, FOCS 2022] and $O(n^{7/4})$ for general graphs [Kimmel-Witter, WADS 2021]. <br/>
                 
                 <b>Lower bounds on parameterized quantum query complexity.</b>
                 We also present lower bounds on the quantum query complexities of the $k$-vertex cover and $k$-matching problems. The lower bounds prove the optimality of the above parameterized quantum query algorithms up to a constant factor when $k$ is small. Indeed, the quantum query complexities of the $k$-vertex cover and $k$-matching problems are both $\Theta(\sqrt{k} n)$ when $k = O(\sqrt{n})$ and $k = O(n^{2/3})$, respectively.
@@ -315,9 +337,6 @@ MathJax = {
 <section id="manuscript">
 <h5>プレプリント</h5>
 <p>Coming soon.</p>
-<!-- <ol reversed>
-    
-</ol> -->
 </section>
 </div>
 </section>
@@ -367,8 +386,15 @@ MathJax = {
 <h5>国内学会・研究会発表</h5>
 
 <ul>
+    <li><u>寺尾樹哉</u>: 「<strong>グラフ的マトロイドパリティ問題に対する高速なアルゴリズム</strong>」
+        <ul class="presentations">
+            <li>第22回 情報科学ワークショップ, 2026年9月13日, グランドメルキュール琵琶湖. <a href="jslide/2026.09.13.WS.pdf" class="slides-button">slides</a>
+            <li>日本オペレーションズ・リサーチ学会 2026年秋季研究発表会, 2026年9月10日, 京都大学. <a href="jslide/2026.09.10.OR.pdf" class="slides-button">slides</a>  
+        </ul>
+    </li>
     <li><u>寺尾樹哉</u>: 「<strong>線形マトロイド交叉問題に対する高速な近似アルゴリズム</strong>」
         <ul class="presentations">
+            <li> 日本応用数理学会 2026年度年会 離散システム研究部会, 2026年9月17日, 福岡国際会議場. <a href="jslide/2026.09.17.JSIAM.pdf" class="slides-button">slides</a>
             <li> 2025年度冬のLAシンポジウム, 2026年1月28日, 京都大学. <a href="jslide/2026.01.28.LA.pdf" class="slides-button">slides</a>
         </ul>
     </li>
@@ -411,6 +437,9 @@ MathJax = {
 <h4><i class="bi bi-award"></i> 受賞</h4>
 <div class="naiyou">
 <ul>
+    <li> OR学会 2026年秋季研究発表会, 学生優秀発表賞, 2026年9月28日. <a href="https://orsj.org/2026f/conference/student_award/" class="link-button">link</a> </li>
+    <li> 第22回 情報科学ワークショップ, 優秀研究賞, 2026年9月15日. <a href="https://w-tcs.github.io/2026/" class="link-button">link</a> </li>
+    <li>20th Scandinavian Symposium on Algorithm Theory (<strong>SWAT 2026</strong>), Best Student Paper Award, 2026年6月19日. <a href="https://swat2026.compute.dtu.dk/p/programme#SWAT-session-details" class="link-button">link</a> </li>
     <li>2025年度冬のLAシンポジウム 学生発表論文賞, 2026年1月28日. <a href="https://la-symposium.github.io/2025/winter.html#laeatcs-japan-発表論文賞学生発表論文賞-laeatcs-japan-presentation-award-student-presentation-award" class="link-button">link</a></li>
     <li>日本応用数理学会 2024年度年会 若手優秀講演賞, 2025年6月27日. <a href="https://jsiam.org/award/young_lecture_award/%e7%ac%ac21%e5%9b%9e-%e8%8b%a5%e6%89%8b%e5%84%aa%e7%a7%80%e8%ac%9b%e6%bc%94%e8%b3%9e-2024%e5%b9%b4%e5%ba%a6/" class="link-button">link</a></li>
     <li>最適化の理論とアルゴリズム:未来を担う若手研究者の集い 2025, 最優秀発表賞, 2025年6月1日. <a href="https://orsj.org/raota/#tsukuba25" class="link-button">link</a></li>
@@ -420,6 +449,26 @@ MathJax = {
     <li>OR学会関西支部 若手研究発表会, 優秀発表賞, 2022年10月29日. <a href="https://orsj.org/kansai/2022/11/14/%E6%97%A5%E6%9C%ACor%E5%AD%A6%E4%BC%9A-%E9%96%A2%E8%A5%BF%E6%94%AF%E9%83%A8-2022-%E5%B9%B4%E5%BA%A6%E8%8B%A5%E6%89%8B%E7%A0%94%E7%A9%B6%E7%99%BA%E8%A1%A8%E4%BC%9A-%E5%84%AA%E7%A7%80%E7%99%BA%E8%A1%A8/" class="link-button">link</a></li>
 </ul>
 </div>
+</section>
+
+<section id="activity">
+    <h4><i class="bi bi-clipboard-check"></i> 活動</h4>
+    <div class="naiyou">
+    <ul>
+        <li>査読: RANDOM 2025, IPCO 2026, ICALP 2026, MFCS 2026, SODA 2027, ITCS 2027.
+    </ul>
+    </div>
+</section>
+
+<section id="funding">
+    <h4><i class="bi bi-cash-coin"></i> 研究費</h4>
+    <div class="naiyou">
+    <ul>
+        <li>
+            2024年4月 - 2027年3月 日本学術振興会特別研究員(DC1) 「マトロイドに関する問題に対する理論的に高速なアルゴリズムの設計」<a href="https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-24KJ1494/" class="link-button">link</a>
+        </li>
+    </ul>
+    </div>
 </section>
 
 <section id="link">
