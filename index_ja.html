@@ -321,11 +321,11 @@ MathJax = {
                     such that $P_i$ connects $s_i$ and $t_i$ for $i = 1, \dots , k$ and the sum of their lengths is minimized.
                     This problem is a natural optimization version of the well-known $k$-disjoint paths problem, 
                     and its polynomial solvability is widely open. 
-                    One of the best results on the shortest $k$-disjoint paths problem is due to Datta et al. [FSTTCS 2018], 
+                    One of the best results on the shortest $k$-disjoint paths problem is due to Datta et al., 
                     who present a polynomial-time algorithm for the case when $G$ is planar and all the terminals are on one face. 
                     In this paper, we extend this result by giving a polynomial-time randomized algorithm for the case when 
                     all the terminals except one are on some face of $G$. 
-                    In our algorithm, we combine the arguments of Datta et al.~with some results on the shortest disjoint $(A + B)$-paths problem shown by Hirai and Namba [Algorithmica 2018]. 
+                    In our algorithm, we combine the arguments of Datta et al.~with some results on the shortest disjoint $(A + B)$-paths problem shown by Hirai and Namba. 
                     To this end, we present a non-trivial bijection between $k$ disjoint paths and disjoint $(A + B)$-paths, which is a key technical contribution of this paper.
                 </div>
             </span>
@@ -336,7 +336,25 @@ MathJax = {
 
 <section id="manuscript">
 <h5>プレプリント</h5>
-<p>Coming soon.</p>
+<!-- <p>Coming soon.</p> -->
+ <ol reversed>
+        <li>
+        <strong>A Faster Auction Algorithm for Weighted Matroid Intersection</strong> <a href="https://arxiv.org/abs/2610.00920" class="paper-button">arXiv</a> <br />
+        Tatsuya Terao <br />
+        <a href="pdf/simplified_analysis.pdf">Simplified proof by GPT 6 Astra</a> <br />
+        <div class="openbox">
+            <label for="wmi"><i class="bi bi-chevron-expand"></i> Abstract</label>
+            <input id="wmi" class="inputcss" type="checkbox" />
+            <span class="boxshow">
+                <div class="box6">
+                    We consider the weighted matroid intersection problem in the independence-oracle model. A sequence of works by Huang--Kakimura--Kamiyama [SODA'16 & Math. Program'19], Chekuri--Quanrud [SODA'16], Quanrud [ICALP'24], and Dudeja--Grilnberger [IPCO'26] has developed efficient $(1-\varepsilon)$-approximation algorithms for this problem. <br />
+
+                    We present a simple deterministic auction algorithm that, given two matroids on a common ground set of size $n$, computes a $(1-\varepsilon)$-approximate maximum-weight common independent set using $O(n \varepsilon^{-2} \log^2(n))$ independence-oracle queries. This is the first deterministic $(1-\varepsilon)$-approximation algorithm for the weighted matroid intersection problem whose query complexity is nearly linear in $n$ and polynomial in $1/\varepsilon$. Our algorithm builds on the auction algorithm for unweighted matroid intersection by Huang--Kobayashi ['26], together with the analysis of the auction algorithm for weighted bipartite matching by Liu--Ke--Khuller [APPROX'23].
+                </div>
+            </span>
+        </div>
+    </li>
+ </ol>
 </section>
 </div>
 </section>
