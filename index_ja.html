@@ -171,7 +171,7 @@ MathJax = {
 <h4><i class="bi bi-file-earmark-check"></i> 論文</h4>
 <div class="naiyou">
 <!-- <p><a href="comment.html"><font size="4">各論文に関するコメントはこちら．</font></a></p> -->
-<p><a href="https://www.ams.org/profession/leaders/culture/JointResearchandItsPublicationfinal.pdf">理論計算機学の慣習により</a>、著者順は基本的にアルファベット順。(但し、ⓒで区切っているものは貢献度順、ⓡで区切っているものの著者順はランダムである。)</p>
+<p><a href="https://www.ams.org/profession/leaders/culture/JointResearchandItsPublicationfinal.pdf">理論計算機学の慣習により</a>、著者順は基本的にアルファベット順。(但し、ⓒで区切っているものは貢献度順、ⓡで区切っているものの著者順はランダムである。) <i class="bi bi-robot"></i> のアイコンが付いた論文は、生成AIの支援を受けて主結果を得たものある。</p>
 
 <section id="review">
 <h5>査読付き論文</h5>
@@ -339,9 +339,56 @@ MathJax = {
 <!-- <p>Coming soon.</p> -->
  <ol reversed>
         <li>
-        <strong>A Faster Auction Algorithm for Weighted Matroid Intersection</strong> <a href="https://arxiv.org/abs/2610.00920" class="paper-button">arXiv</a> <br />
+    <strong>Improved Pass Complexity for Semi-Streaming Matching in General Graphs via Budgeted Price Approach</strong> <i class="bi bi-robot"></i>  <br />
+    Tatsuya Terao <br />
+    <div class="openbox">
+        <label for="matchingstreaming"><i class="bi bi-chevron-expand"></i> Abstract</label>
+        <input id="matchingstreaming" class="inputcss" type="checkbox" />
+        <span class="boxshow">
+            <div class="box6">
+                We present a simple deterministic semi-streaming algorithm that computes a $(1-\varepsilon)$-approximate maximum matching in general graphs in $O(1/\varepsilon^{2})$ passes. This matches the pass complexity of the auction algorithm of Assadi, Liu, and Tarjan [SOSA'21] for bipartite graphs, and answers Open Question 2 of Assadi [SOSA'24 &amp; TheoretiCS'25]. <br />
+
+                Our approach, which we call the <em>budgeted price approach</em>, is very different from the previous $\mathrm{poly}(1/\varepsilon)$-pass semi-streaming algorithms for $(1-\varepsilon)$-approximation of matching in general graphs and improves their pass complexity. All previous approaches are augmenting-path-based and use $O(1/\varepsilon^{19})$ passes by Fischer, Mitrović, and Uitto [STOC'22], $O(1/\varepsilon^{6})$ passes by Mitrović, Mukherjee, Sankowski, and Sheu [ICALP'25], and $O(1/\varepsilon^{4})$ passes by Izumi, Kitamura, and Yamaguchi ['25].
+            </div>
+        </span>
+    </div>
+    </li>
+    <li>
+    <strong>Nearly-Linear Query Algorithm for Submodular Maximization subject to a Matroid Constraint</strong> <i class="bi bi-robot"></i> <a href="pdf/Nearly_Linear_Query_Submodular_Maximization_under_Matroid_Constraint_preprint.pdf" class="paper-button">manuscript</a> <br />
+    Tatsuya Terao <br />
+    <div class="openbox">
+        <label for="nlsubmat"><i class="bi bi-chevron-expand"></i> Abstract</label>
+        <input id="nlsubmat" class="inputcss" type="checkbox" />
+        <span class="boxshow">
+            <div class="box6">
+                We consider monotone submodular maximization subject to a matroid constraint. The seminal continuous greedy algorithm of Calinescu, Chekuri, Pál, and Vondrák [SICOMP'11] achieves the tight approximation of $(1-1/e)$. Since then, a line of works by Badanidiyuru and Vondrák [SODA'14], Buchbinder, Feldman, and Schwartz [SODA'15 &amp; MOR'17], Kobayashi and Terao [ICALP'24], Buchbinder and Feldman [FOCS'24 &amp; SICOMP'25], and Buchbinder and Feldman [STOC'25] has developed efficient $(1-1/e-\varepsilon)$-approximation algorithms for this problem. <br />
+
+                We present a combinatorial randomized $(1-1/e-\varepsilon)$-approximation algorithm that requires $\tilde{O}_{\varepsilon}(n)$ independence-oracle and value-oracle queries, where $n$ is the number of elements in the matroid. This is the first $(1-1/e-\varepsilon)$-approximation algorithm with both independence-oracle and value-oracle query complexities nearly-linear in $n$ and polynomial in $1/\varepsilon$. To achieve this, we develop a new local search algorithm, which we call <em>protected local search</em>, based on the potential function of Buchbinder and Feldman [FOCS'24 &amp; SICOMP'25].
+            </div>
+        </span>
+    </div>
+    </li>
+    <li>
+    <strong>Simplified and Faster Algorithms for the Directed Single/Dual-Failure Replacement Paths via Modulo-Layer Hitting Sets</strong> <i class="bi bi-robot"></i> <br />
+    <a href="https://scholar.google.com/citations?user=fUTYuMkAAAAJ&hl=en">Kaito Harada</a> ⓡ Tatsuya Terao <br />
+    <div class="openbox">
+        <label for="rp"><i class="bi bi-chevron-expand"></i> Abstract</label>
+        <input id="rp" class="inputcss" type="checkbox" />
+        <span class="boxshow">
+            <div class="box6">
+                We study the replacement paths problem in unweighted directed graphs with $n$ vertices and $m$ edges under one or two edge failures. We give simpler and faster algorithms for both settings. Both algorithms are based on a new technique, which we call <em>modulo-layer hitting sets</em>. <br />
+
+                For the single-failure setting, we obtain a simple deterministic combinatorial algorithm running in $O(m\sqrt{n})$ time, which is nearly optimal under the combinatorial Boolean Matrix Multiplication (BMM) conjecture. In addition to removing the logarithmic overhead of the deterministic $\tilde{O}(m\sqrt{n})$-time algorithm of Alon, Chechik, and Cohen [ICALP'19], our algorithm admits a much simpler implementation and analysis. <br />
+
+                For the dual-failure setting, we obtain a randomized combinatorial algorithm running in $\tilde{O}(n^{3-1/4})$ time. This improves upon the previous $\tilde{O}(n^{3-1/18})$-time combinatorial algorithm of Chechik and Zhang [ICALP'24].
+            </div>
+        </span>
+    </div>
+    </li>
+        <li>
+        <strong>A Faster Auction Algorithm for Weighted Matroid Intersection</strong> <i class="bi bi-robot"></i> <a href="https://arxiv.org/abs/2610.00920" class="paper-button">arXiv</a> <br />
         Tatsuya Terao <br />
-        <a href="pdf/simplified_analysis.pdf">Simplified proof by GPT 6 Astra</a> <br />
+        <!-- <a href="pdf/simplified_analysis.pdf">Simplified proof by GPT 6 Astra</a> <br /> -->
         <div class="openbox">
             <label for="wmi"><i class="bi bi-chevron-expand"></i> Abstract</label>
             <input id="wmi" class="inputcss" type="checkbox" />
@@ -363,7 +410,7 @@ MathJax = {
 <h4><i class="bi bi-file-slides"></i> 発表</h4>
 <div class="naiyou">
 <section id="kokusai">
-<h5>国際学会発表</h5>
+<h5>国際学会・研究会発表</h5>
 
 <ul>
     <li>
