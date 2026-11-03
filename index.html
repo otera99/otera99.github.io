@@ -100,7 +100,7 @@ I have an interest in the design and analysis of algorithms in theoretical compu
 <div class="naiyou">
 <p>See also <a href="https://dblp.org/pid/335/5620.html">DBLP</a> for an up-to-date list.</p>
 
-<p>As is <a href="https://www.ams.org/profession/leaders/culture/JointResearchandItsPublicationfinal.pdf">the convention in theoretical computer science</a>, authors are listed alphabetically, except that ⓒ and ⓡ are used in place of commas to indicate contribution order and random order, respectively. Papers marked with<i class="bi bi-robot"></i> obtained their main results with the assistance of generative AI.</p>
+<p>As is <a href="https://www.ams.org/profession/leaders/culture/JointResearchandItsPublicationfinal.pdf">the convention in theoretical computer science</a>, authors are listed alphabetically, except that ⓒ and ⓡ are used in place of commas to indicate contribution order and random order, respectively. For papers marked with<i class="bi bi-robot"></i>, the ideas behind the main results were obtained with the assistance of generative AI.</p>
 
 <h5>Refereed Papers</h5>
 
@@ -268,16 +268,31 @@ I have an interest in the design and analysis of algorithms in theoretical compu
 <!-- <p>Coming soon.</p> -->
  <ol reversed>
     <li>
-    <strong>Improved Pass Complexity for Semi-Streaming Matching in General Graphs via Budgeted Price Approach</strong> <i class="bi bi-robot"></i> <a href="https://arxiv.org/abs/2610.22718" class="paper-button">arXiv</a> <br />
+    <strong>Faster graphic matroid parity: Breaking the $nm$ time complexity barrier</strong> <a href="https://arxiv.org/abs/2611.02287" class="paper-button">arXiv</a> <br />
     Tatsuya Terao <br />
     <div class="openbox">
-        <label for="matchingstreaming"><i class="bi bi-chevron-expand"></i> Abstract</label>
-        <input id="matchingstreaming" class="inputcss" type="checkbox" />
+        <label for="graphicmatroidparity"><i class="bi bi-chevron-expand"></i> Abstract</label>
+        <input id="graphicmatroidparity" class="inputcss" type="checkbox" />
         <span class="boxshow">
             <div class="box6">
-                We present a simple deterministic semi-streaming algorithm that computes a $(1-\varepsilon)$-approximate maximum matching in general graphs in $O(1/\varepsilon^{2})$ passes. This matches the pass complexity of the auction algorithm of Assadi, Liu, and Tarjan [SOSA'21] for bipartite graphs, and answers Open Question 2 of Assadi [SOSA'24 &amp; TheoretiCS'25]. <br />
+                In the graphic matroid parity problem, we are given an undirected multigraph $G=(V,E)$ with $n$ vertices, together with a partition of $E$ into $m$ pairs of distinct edges, and the goal is to find a maximum-cardinality collection of pairs whose union is a forest. This problem generalizes both graph matching and graphic matroid intersection. Graph matching admits the celebrated $\tilde{O}(\sqrt{n}m)$-time algorithm of Micali--Vazirani [FOCS'80], and graphic matroid intersection admits $o(nm)$-time algorithms due to Gabow--Stallmann [ICALP'85] and Gabow--Xu [FOCS'89]. In contrast, for graphic matroid parity, Gabow--Stallmann [FOCS'84 &amp; Combinatorica'86] gave an $O(n^2 m)$-time algorithm, and its $\tilde{O}(nm)$-time implementation by Gabow--Stallmann [ICALP'85] had long remained the best known bound, except in very dense regimes where $m=\omega(n^3)$, in which case the algebraic $\tilde{O}(n^4)$-time algorithm of Cheung--Lau--Leung [SODA'11 &amp; TALG'14] is faster. <br />
 
-                Our approach, which we call the <em>budgeted price approach</em>, is very different from the previous $\mathrm{poly}(1/\varepsilon)$-pass semi-streaming algorithms for $(1-\varepsilon)$-approximation of matching in general graphs and improves their pass complexity. All previous approaches are augmenting-path-based and use $O(1/\varepsilon^{19})$ passes by Fischer, Mitrović, and Uitto [STOC'22], $O(1/\varepsilon^{6})$ passes by Mitrović, Mukherjee, Sankowski, and Sheu [ICALP'25], and $O(1/\varepsilon^{4})$ passes by Izumi, Kitamura, and Yamaguchi ['25].
+                We present a randomized $\tilde{O}(n^{3/2} \sqrt{m} + \sqrt{n} m)$-time algorithm for graphic matroid parity. This is the first algorithm to break the $O(nm)$-time complexity barrier for this problem outside the very dense regime. Moreover, it improves over the previous bounds except in very sparse regimes where $m=\tilde{O}(n)$ and in very dense regimes where $m = \tilde{\Omega}(n^{3.5})$. In particular, when $m=\Theta(n^2)$, our algorithm runs in $\tilde{O}(n^{2.5})$ time, which nearly matches the $\tilde{O}(n^{2.5})$-time bounds of Micali--Vazirani for graph matching and of Gabow--Xu for graphic matroid intersection in this regime.
+            </div>
+        </span>
+    </div>
+    </li>
+    <li>
+    <strong>Auction-Based Algorithms for Weighted Matroid Intersection with Near-Linear Query Complexity</strong> <br />
+    <a href="https://www.di.ens.fr/~cchuang/">Chien-Chung Huang</a>, <a href="https://www.kurims.kyoto-u.ac.jp/~yusuke/eindex.html">Yusuke Kobayashi</a>, Tatsuya Terao <br />
+    <div class="openbox">
+        <label for="auctionbasedwmi"><i class="bi bi-chevron-expand"></i> Abstract</label>
+        <input id="auctionbasedwmi" class="inputcss" type="checkbox" />
+        <span class="boxshow">
+            <div class="box6">
+                We study fast approximation algorithms for weighted matroid intersection in the rank-oracle and independence-oracle models. Given two matroids on a common ground set of size $n$ and nonnegative element weights, we present deterministic algorithms that compute a $(1-\varepsilon)$-approximate maximum-weight common independent set. Our rank-oracle algorithm uses $O(n\log n/\varepsilon)$ queries, matching the best known query bound for the unweighted problem. Our independence-oracle algorithm uses $O(n\log r\,(\varepsilon^{-1}\log r+\varepsilon^{-2}))$ queries, where $r$ is the maximum cardinality of a common independent set. It gives the first deterministic $(1-\varepsilon)$-approximation algorithm for weighted matroid intersection with query complexity nearly linear in $n$ and polynomial in $1/\varepsilon$. As a further application, we obtain a semi-streaming algorithm for weighted matroid intersection. <br />
+
+                Our algorithms are based on an auction framework inspired by the connection between stable matching and auction algorithms for bipartite matching, as well as by Fleiner's matroidal generalization of the Gale--Shapley algorithm. They handle weighted matroid intersection directly, without any reduction to the unweighted problem, and are considerably simpler than previous approaches.
             </div>
         </span>
     </div>
@@ -314,10 +329,11 @@ I have an interest in the design and analysis of algorithms in theoretical compu
         </span>
     </div>
     </li>
+    <!--
     <li>
     <strong>A Faster Auction Algorithm for Weighted Matroid Intersection</strong> <i class="bi bi-robot"></i> <a href="https://arxiv.org/abs/2610.00920" class="paper-button">arXiv</a>  <br />
     Tatsuya Terao <br />
-    <!-- <a href="pdf/simplified_analysis.pdf">Simplified proof by GPT 6 Astra</a> <br /> -->
+    <a href="pdf/simplified_analysis.pdf">Simplified proof by GPT 6 Astra</a> <br />
     <div class="openbox">
         <label for="wmi"><i class="bi bi-chevron-expand"></i> Abstract</label>
         <input id="wmi" class="inputcss" type="checkbox" />
@@ -326,6 +342,22 @@ I have an interest in the design and analysis of algorithms in theoretical compu
                 We consider the weighted matroid intersection problem in the independence-oracle model. A sequence of works by Huang--Kakimura--Kamiyama [SODA'16 & Math. Program'19], Chekuri--Quanrud [SODA'16], Quanrud [ICALP'24], and Dudeja--Grilnberger [IPCO'26] has developed efficient $(1-\varepsilon)$-approximation algorithms for this problem. <br />
 
                 We present a simple deterministic auction algorithm that, given two matroids on a common ground set of size $n$, computes a $(1-\varepsilon)$-approximate maximum-weight common independent set using $O(n \varepsilon^{-2} \log^2(n))$ independence-oracle queries. This is the first deterministic $(1-\varepsilon)$-approximation algorithm for the weighted matroid intersection problem whose query complexity is nearly linear in $n$ and polynomial in $1/\varepsilon$. Our algorithm builds on the auction algorithm for unweighted matroid intersection by Huang--Kobayashi ['26], together with the analysis of the auction algorithm for weighted bipartite matching by Liu--Ke--Khuller [APPROX'23].
+            </div>
+        </span>
+    </div>
+    </li>
+    -->
+    <li>
+    <strong>Improved Pass Complexity for Semi-Streaming Matching in General Graphs via Budgeted Price Approach</strong> <i class="bi bi-robot"></i> <a href="https://arxiv.org/abs/2610.22718" class="paper-button">arXiv</a> <br />
+    Tatsuya Terao <br />
+    <div class="openbox">
+        <label for="matchingstreaming"><i class="bi bi-chevron-expand"></i> Abstract</label>
+        <input id="matchingstreaming" class="inputcss" type="checkbox" />
+        <span class="boxshow">
+            <div class="box6">
+                We present a simple deterministic semi-streaming algorithm that computes a $(1-\varepsilon)$-approximate maximum matching in general graphs in $O(1/\varepsilon^{2})$ passes. This matches the pass complexity of the auction algorithm of Assadi, Liu, and Tarjan [SOSA'21] for bipartite graphs, and answers Open Question 2 of Assadi [SOSA'24 &amp; TheoretiCS'25]. <br />
+
+                Our approach, which we call the <em>budgeted price approach</em>, is very different from the previous $\mathrm{poly}(1/\varepsilon)$-pass semi-streaming algorithms for $(1-\varepsilon)$-approximation of matching in general graphs and improves their pass complexity. All previous approaches are augmenting-path-based and use $O(1/\varepsilon^{19})$ passes by Fischer, Mitrović, and Uitto [STOC'22], $O(1/\varepsilon^{6})$ passes by Mitrović, Mukherjee, Sankowski, and Sheu [ICALP'25], and $O(1/\varepsilon^{4})$ passes by Izumi, Kitamura, and Yamaguchi ['25].
             </div>
         </span>
     </div>
